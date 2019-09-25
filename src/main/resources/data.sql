@@ -1,15 +1,10 @@
-DROP TABLE IF EXISTS customers;
-
-CREATE TABLE customers (
- id INT AUTO_INCREMENT  PRIMARY KEY,
-  first_name VARCHAR(250) NOT NULL,
-  last_name VARCHAR(250) NOT NULL,
-  email VARCHAR(250) DEFAULT NULL );
 
 INSERT INTO 
 	customers (first_name, last_name, email) 
 VALUES
-  	('Leon', 'Lorena', 'leonlorena@yahoo.com'),
-	  	('Nikolas', 'Marvin', 'nikolasmavin@gmail.com'),
-		  	('Mavin', 'Lorena', 'mavinlorena@gmail.com'),
-			  	('Lorena', 'Nikolas', 'lorenanikolas@hotmail.com');
+  	('David Buchizya', 'Vegetarian', 'HighTable-A1'),
+ 	('Xi Jinping', 'Communist', 'HighTable -B1'),
+	('Linos Nchena ', 'carnivorous', 'Nice Table-D10'),
+	('Mark Zuckerberg,', 'carnivorous', 'Black Table- D9'),
+	('Masautso Tembo', 'carnivorous', 'Black Table-D8');
+-->			  SELECT * from customers
