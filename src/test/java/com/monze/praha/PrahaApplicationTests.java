@@ -1,4 +1,3 @@
-//package com.monze.praha;
 package com.monze.praha;
 
 import org.junit.Test;
