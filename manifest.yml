@@ -1,7 +1,7 @@
 ---
 applications:
-- name: Census2019Z
-  instances: 3
+- name: mazabuka
+  instances: 1
   path: C:\Users\linos\Downloads\FortifiedEmails\target\praha-0.0.1-snapshot.jar
   memory: 723910K
   services:
