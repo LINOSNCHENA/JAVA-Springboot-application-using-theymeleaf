@@ -23,8 +23,7 @@ public class CustomerController
 	@RequestMapping
 	public String readCustomers(Model model) 
 	{ List<CustomerEntity> list = service.readCustomers();
-		model.addAttribute("customers", list);
-		return "customerDisplays";}
+		model.addAttribute("customers", list);	return "customerDisplays";	}
 
 // http://localhost:8080/edit[id]
 	@GetMapping(path = {"/edit", "/edit/{id}"})
@@ -32,12 +31,18 @@ public class CustomerController
 		throws RecordNotFoundException 
 	   {if (id.isPresent()) {
 			CustomerEntity entity = service.readOneCustomer(id.get());
-			model.addAttribute("customer", entity);
-		} else {	model.addAttribute("customer", new CustomerEntity());	}
+			model.addAttribute("customer", entity);		} 
+		else {	model.addAttribute("customer", new CustomerEntity());	}
 		return "customerAddition";}
 
 // http://localhost:8080/createCustomer
 @RequestMapping(path = "/createCustomer",	method = { RequestMethod.PUT, RequestMethod.POST })
 	public String createCustomer(CustomerEntity customer) 
 	{	service.createOrUpdateCustomer(customer);		return "redirect:/";	}
+
+// http://localhost:8080/delete/[;id]
+@RequestMapping(path = "/delete/{id}")
+public String deleteEmployeeById(Model model, @PathVariable("id") Long id)
+                            throws RecordNotFoundException
+    {   service.deleteEmployeeById(id);      			 return "redirect:/";    }
 }

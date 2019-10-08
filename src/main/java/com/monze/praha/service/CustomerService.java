@@ -41,4 +41,15 @@ public CustomerEntity createOrUpdateCustomer(CustomerEntity entity)
 		else {entity = repository.save(entity);	return entity;}
 		}
 	} 																	     	// service #3
+    public void deleteEmployeeById(Long id) throws RecordNotFoundException
+    {
+        Optional<CustomerEntity> employee = repository.findById(id);
+         
+        if(employee.isPresent())
+        {
+            repository.deleteById(id);
+        } else {
+            throw new RecordNotFoundException("No employee record exist for given id");
+        }
+    }
 }
