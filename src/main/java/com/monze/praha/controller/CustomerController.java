@@ -22,8 +22,8 @@ public class CustomerController
 
 //http://localhost:8080/
 	@RequestMapping
-	public String getCustomers(Model model) 
-	{ List<CustomerEntity> list = service.getCustomers();
+	public String readCustomers(Model model) 
+	{ List<CustomerEntity> list = service.readCustomers();
 		model.addAttribute("customers", list);
 		return "customerDisplays";
 	}

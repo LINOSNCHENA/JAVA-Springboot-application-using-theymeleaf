@@ -13,7 +13,7 @@ import com.monze.praha.repository.CustomerRepository;
 public class CustomerService {
 	@Autowired
 	CustomerRepository repository;	
-public List<CustomerEntity> getCustomers()										// service #1
+public List<CustomerEntity> readCustomers()										// service #1
 	{	List<CustomerEntity> result = (List<CustomerEntity>) repository.findAll();
 		if(result.size() > 0) {	return result;		 } 
 		else {return new ArrayList<CustomerEntity>(); }
