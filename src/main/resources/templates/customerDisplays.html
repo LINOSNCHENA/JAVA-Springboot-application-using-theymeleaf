@@ -38,11 +38,11 @@
                                 <td th:text="${customer.firstName}"></td>
                                 <td th:text="${customer.lastName}"></td>
                                 <td th:text="${customer.email}"></td>
-                                <td><a th:href="@{/edit/{id}(id=${customer.id})}" class="btn btn-primary">
+                                <td><a th:href="@{/edit/{id}(id=${customer.id})}"   class="btn btn-warning btn-xs">
                                 <i class="fas fa-user-edit ml-2"></i></a></td>
-                                <td><a th:href="@{/delete/{id}(id=${customer.id})}" class="btn btn-primary">
+                                <td><a th:href="@{/delete/{id}(id=${customer.id})}" class="btn btn-danger btn-xs">
                                  <i class="fas fa-user-slash ml-2"></i></a></td>
-                            </tr>
+                            </tr> 
                         </tbody>
                     </table>                    
                 </div>
