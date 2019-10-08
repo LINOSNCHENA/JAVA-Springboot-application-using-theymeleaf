@@ -13,7 +13,7 @@ import com.monze.praha.repository.CustomerRepository;
 public class CustomerService {
 	@Autowired
 	CustomerRepository repository;	
-public List<CustomerEntity> readCustomers()										// service #1
+public List<CustomerEntity> readCustomers()											// service #1
 	{	List<CustomerEntity> result = (List<CustomerEntity>) repository.findAll();
 		if(result.size() > 0) {	return result;		 } 
 		else {return new ArrayList<CustomerEntity>(); }
@@ -24,7 +24,7 @@ public CustomerEntity readOneCustomer(Long id) throws RecordNotFoundException
 		if(customer.isPresent()) {return customer.get();	}
 		else {
 		throw new RecordNotFoundException("No Customer record exist for given id");	}
-	}																		  	  // service #2
+	}																		  	  	// service #2
 
 public CustomerEntity createOrUpdateCustomer(CustomerEntity entity) 	         		 
 	{	if(entity.getId()  == null) 
@@ -36,20 +36,14 @@ public CustomerEntity createOrUpdateCustomer(CustomerEntity entity)
 			newEntity.setFirstName(entity.getFirstName());
 			newEntity.setLastName(entity.getLastName());
 			newEntity.setEmail(entity.getEmail());	
-			newEntity = repository.save(newEntity);					
-			return newEntity;	} 
-		else {entity = repository.save(entity);	return entity;}
+			newEntity = repository.save(newEntity);  	return newEntity;	} 	
+		else {entity = repository.save(entity);			return entity;		}
 		}
 	} 																	     	// service #3
     public void deleteEmployeeById(Long id) throws RecordNotFoundException
-    {
-        Optional<CustomerEntity> employee = repository.findById(id);
-         
-        if(employee.isPresent())
-        {
-            repository.deleteById(id);
-        } else {
-            throw new RecordNotFoundException("No employee record exist for given id");
-        }
-    }
+    {  Optional<CustomerEntity> employee = repository.findById(id);
+     if(employee.isPresent())
+		{   repository.deleteById(id);   } 
+	 else {throw new RecordNotFoundException("No such record exist in the database"); }
+    }																			// service #4
 }

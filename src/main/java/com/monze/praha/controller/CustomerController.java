@@ -20,13 +20,13 @@ public class CustomerController
 	CustomerService service;
 
 //http://localhost:8080/
-	@RequestMapping
+@RequestMapping
 	public String readCustomers(Model model) 
 	{ List<CustomerEntity> list = service.readCustomers();
 		model.addAttribute("customers", list);	return "customerDisplays";	}
 
 // http://localhost:8080/edit[id]
-	@GetMapping(path = {"/edit", "/edit/{id}"})
+@GetMapping(path = {"/edit", "/edit/{id}"})
 	public String readCustomerById(Model model, @PathVariable("id") Optional<Long> id) 
 		throws RecordNotFoundException 
 	   {if (id.isPresent()) {
@@ -43,6 +43,6 @@ public class CustomerController
 // http://localhost:8080/delete/[;id]
 @RequestMapping(path = "/delete/{id}")
 public String deleteEmployeeById(Model model, @PathVariable("id") Long id)
-                            throws RecordNotFoundException
+    throws RecordNotFoundException
     {   service.deleteEmployeeById(id);      			 return "redirect:/";    }
 }
