@@ -19,14 +19,14 @@ public List<CustomerEntity> readCustomers()										// service #1
 		else {return new ArrayList<CustomerEntity>(); }
 	}
 																				 
-public CustomerEntity updateCustomer(Long id) throws RecordNotFoundException   	
+public CustomerEntity readOneCustomer(Long id) throws RecordNotFoundException   	
 	{	Optional<CustomerEntity> customer = repository.findById(id);
 		if(customer.isPresent()) {return customer.get();	}
 		else {
 		throw new RecordNotFoundException("No Customer record exist for given id");	}
 	}																		  	  // service #2
 
-public CustomerEntity createCustomer(CustomerEntity entity) 	         		 
+public CustomerEntity createOrUpdateCustomer(CustomerEntity entity) 	         		 
 	{	if(entity.getId()  == null) 
 		{	entity = repository.save(entity);			return entity;	} 
 	else 
