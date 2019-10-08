@@ -44,5 +44,5 @@ public class CustomerController
 @RequestMapping(path = "/delete/{id}")
 public String deleteEmployeeById(Model model, @PathVariable("id") Long id)
     throws RecordNotFoundException
-    {   service.deleteEmployeeById(id);      			 return "redirect:/";    }
+    {   service.deleteEmployeeById(id);      		     return "redirect:/";    }
 }
