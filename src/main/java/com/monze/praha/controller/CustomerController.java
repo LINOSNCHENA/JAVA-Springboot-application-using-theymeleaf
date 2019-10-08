@@ -20,19 +20,18 @@ public class CustomerController
 	@Autowired
 	CustomerService service;
 
-//http://localhost:8080
+//http://localhost:8080/
 	@RequestMapping
-	public String getAllCustomers(Model model) 
-	{ List<CustomerEntity> list = service.getAllCustomers();
+	public String getCustomers(Model model) 
+	{ List<CustomerEntity> list = service.getCustomers();
 		model.addAttribute("customers", list);
 		return "customerDisplays";
 	}
 // http://localhost:8080/edit[id]
 	@GetMapping(path = {"/edit", "/edit/{id}"})
-	public String editCustomerById(Model model, @PathVariable("id") Optional<Long> id) 
-							throws RecordNotFoundException 
-	{
-		if (id.isPresent()) {
+	public String updateCustomerById(Model model, @PathVariable("id") Optional<Long> id) 
+		throws RecordNotFoundException 
+	   {if (id.isPresent()) {
 			CustomerEntity entity = service.getCustomerById(id.get());
 			model.addAttribute("customer", entity);
 		} else {
@@ -45,9 +44,9 @@ public class CustomerController
 // http://localhost:8080/createCustomer
 
 @RequestMapping(path = "/createCustomer",method = { RequestMethod.PUT, RequestMethod.POST })
-	public String createOrUpdateCustomer(CustomerEntity customer) 
+	public String createCustomer(CustomerEntity customer) 
 	{
-		service.createOrUpdateCustomer(customer);
+		service.createCustomer(customer);
 		return "redirect:/";
 	}
 }
