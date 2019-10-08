@@ -37,11 +37,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-<<<<<<< HEAD
 <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java	 Monze#1-->
-=======
-<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java Monze#1-->
->>>>>>> 40e95137a81f480a9926446d9c04b44eea8201b0
 <dependency>
     <groupId>mysql</groupId>
     <artifactId>mysql-connector-java</artifactId>
@@ -53,11 +49,7 @@
     <artifactId>postgresql</artifactId>
     <version>42.2.8</version>
 </dependency>
-<<<<<<< HEAD
 <!-- https://mvnrepository.com/artifact/com.microsoft.jdbc  Monze#3-->
-=======
-<!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc Monze#3-->
->>>>>>> 40e95137a81f480a9926446d9c04b44eea8201b0
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
