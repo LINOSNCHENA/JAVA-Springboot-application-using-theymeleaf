@@ -29,24 +29,18 @@ public class CustomerController
 	}
 // http://localhost:8080/edit[id]
 	@GetMapping(path = {"/edit", "/edit/{id}"})
-	public String updateCustomerById(Model model, @PathVariable("id") Optional<Long> id) 
+	public String readCustomerById(Model model, @PathVariable("id") Optional<Long> id) 
 		throws RecordNotFoundException 
 	   {if (id.isPresent()) {
-			CustomerEntity entity = service.getCustomerById(id.get());
+			CustomerEntity entity = service.updateCustomer(id.get());
 			model.addAttribute("customer", entity);
-		} else {
-			model.addAttribute("customer", new CustomerEntity());
-		}
+		} else {	model.addAttribute("customer", new CustomerEntity());	}
 		return "customerAddition";
 	}
 	
-
 // http://localhost:8080/createCustomer
 
-@RequestMapping(path = "/createCustomer",method = { RequestMethod.PUT, RequestMethod.POST })
+@RequestMapping(path = "/createCustomer",	method = { RequestMethod.PUT, RequestMethod.POST })
 	public String createCustomer(CustomerEntity customer) 
-	{
-		service.createCustomer(customer);
-		return "redirect:/";
-	}
+	{	service.createCustomer(customer);		return "redirect:/";	}
 }

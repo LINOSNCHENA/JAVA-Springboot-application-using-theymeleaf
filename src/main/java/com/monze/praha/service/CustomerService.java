@@ -19,28 +19,26 @@ public List<CustomerEntity> readCustomers()										// service #1
 		else {return new ArrayList<CustomerEntity>(); }
 	}
 																				 
-public CustomerEntity getCustomerById(Long id) throws RecordNotFoundException   	
+public CustomerEntity updateCustomer(Long id) throws RecordNotFoundException   	
 	{	Optional<CustomerEntity> customer = repository.findById(id);
 		if(customer.isPresent()) {return customer.get();	}
-		 else {
-			throw new RecordNotFoundException("No Customer record exist for given id");	}
+		else {
+		throw new RecordNotFoundException("No Customer record exist for given id");	}
 	}																		  	  // service #2
 
 public CustomerEntity createCustomer(CustomerEntity entity) 	         		 
-		{
-		if(entity.getId()  == null) 
+	{	if(entity.getId()  == null) 
 		{	entity = repository.save(entity);			return entity;	} 
-		else 
-			{Optional<CustomerEntity> customer = repository.findById(entity.getId());
+	else 
+		{Optional<CustomerEntity> customer = repository.findById(entity.getId());
 		if(customer.isPresent()) 
-			{
-			CustomerEntity newEntity = customer.get();					
+		{	CustomerEntity newEntity = customer.get();					
 			newEntity.setFirstName(entity.getFirstName());
 			newEntity.setLastName(entity.getLastName());
 			newEntity.setEmail(entity.getEmail());	
 			newEntity = repository.save(newEntity);					
-			return newEntity;} 
+			return newEntity;	} 
 		else {entity = repository.save(entity);	return entity;}
-			}
-		} 																	  	// service #3
+		}
+	} 																	     	// service #3
 }
