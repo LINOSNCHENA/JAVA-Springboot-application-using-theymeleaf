@@ -26,7 +26,7 @@ public class CustomerController
 		model.addAttribute("customers", list);	return "customerDisplays";	} // current searchings
 
 // http://localhost:8080/edit[id]
-@GetMapping(path = {"/ones", "/ones/{id}"})		// First and second versioning
+@GetMapping(path = {"/added", "/added/{id}"})		// First and second versioning
 	public String readCustomerById(Model model, @PathVariable("id") Optional<Long> id) 
 		throws RecordNotFoundException 
 	   {if (id.isPresent()) {

@@ -11,7 +11,7 @@
 	
 	<groupId>com.monze</groupId>
 	<artifactId>praha</artifactId>
-	<version>ones4</version>
+	<version>tompemba1</version>
 	<packaging>war</packaging>
 	<name>praha</name>
 	<description>Email-Address application in Spring-Boot</description>
