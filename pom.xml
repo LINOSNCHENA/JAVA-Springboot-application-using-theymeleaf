@@ -11,7 +11,7 @@
 	
 	<groupId>com.Musamba</groupId>
 	<artifactId>praha</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1-SNAPemba</version>
 	<packaging>jar</packaging>
 	<name>praha</name>
 	<description>Email-Address application in Spring-Boot</description>
