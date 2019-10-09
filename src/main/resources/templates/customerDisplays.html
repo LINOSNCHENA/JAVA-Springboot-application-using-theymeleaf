@@ -20,8 +20,7 @@
     
         <div th:switch="${customers}" class="container my-5">  
             <p class="my-5">
-            
-                <a href="/edit" class="btn btn-primary">
+                <a href="ones" class="btn btn-primary">
                 <i class="fas fa-user-plus ml-2"> Data entry for new registration</i></a> </p>
             <div class="col-md-10">
     <div class="filters row">
@@ -46,7 +45,7 @@
                                 <td th:text="${customer.firstName}"></td>
                                 <td th:text="${customer.lastName}"></td>
                                 <td th:text="${customer.email}"></td>
-                                <td><a th:href="@{/edit/{id}(id=${customer.id})}"   class="btn btn-warning btn-xs">
+                                <td><a th:href="@{/ones/{id}(id=${customer.id})}"   class="btn btn-warning btn-xs">
                                 <i class="fas fa-user-edit ml-2"></i></a></td>
                                 <td><a th:href="@{/delete/{id}(id=${customer.id})}" class="btn btn-danger btn-xs">
                                  <i class="fas fa-user-slash ml-2"></i></a></td>

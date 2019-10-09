@@ -23,10 +23,10 @@ public class CustomerController
 @RequestMapping
 	public String readCustomers(Model model) 
 	{ List<CustomerEntity> list = service.readCustomers();
-		model.addAttribute("customers", list);	return "customerDisplays";	}
+		model.addAttribute("customers", list);	return "customerDisplays";	} // current searchings
 
 // http://localhost:8080/edit[id]
-@GetMapping(path = {"/edit", "/edit/{id}"})
+@GetMapping(path = {"/ones", "/ones/{id}"})		// First and second versioning
 	public String readCustomerById(Model model, @PathVariable("id") Optional<Long> id) 
 		throws RecordNotFoundException 
 	   {if (id.isPresent()) {
@@ -37,8 +37,8 @@ public class CustomerController
 
 // http://localhost:8080/createCustomer
 @RequestMapping(path = "/createCustomer",	method = { RequestMethod.PUT, RequestMethod.POST })
-	public String createCustomer(CustomerEntity customer) 
-	{	service.createOrUpdateCustomer(customer);		return "redirect:/";	}
+	public String createCustomer(CustomerEntity customer)  // jumps out of recreate to redirect
+	{	service.creatingCustomer(customer);		 return "redirect:/";	}
 
 // http://localhost:8080/delete/[;id]
 @RequestMapping(path = "/delete/{id}")

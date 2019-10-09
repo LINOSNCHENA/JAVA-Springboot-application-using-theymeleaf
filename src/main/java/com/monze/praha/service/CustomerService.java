@@ -26,7 +26,7 @@ public CustomerEntity readOneCustomer(Long id) throws RecordNotFoundException
 		throw new RecordNotFoundException("No Customer record exist for given id");	}
 	}																		  	  	// service #2
 
-public CustomerEntity createOrUpdateCustomer(CustomerEntity entity) 	         		 
+public CustomerEntity creatingCustomer(CustomerEntity entity) 	         		 
 	{	if(entity.getId()  == null) 
 		{	entity = repository.save(entity);			return entity;	} 
 	else 
