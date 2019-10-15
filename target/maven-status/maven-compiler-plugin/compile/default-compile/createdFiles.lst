@@ -1,6 +1,6 @@
 com\monze\praha\PrahaApplication.class
 com\monze\praha\model\CustomerEntity.class
+com\monze\praha\exception\RecordNotFoundException.class
 com\monze\praha\service\CustomerService.class
 com\monze\praha\controller\CustomerController.class
-com\monze\praha\exception\RecordNotFoundException.class
 com\monze\praha\repository\CustomerRepository.class
