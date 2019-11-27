@@ -12,38 +12,38 @@ import com.monze.praha.repository.CustomerRepository;
 @Service
 public class CustomerService {
 	@Autowired
-	CustomerRepository repository;	
-public List<CustomerEntity> readCustomers()											// service #1
-	{	List<CustomerEntity> result = (List<CustomerEntity>) repository.findAll();
+	CustomerRepository repositoryIoC;		                                // IoC vs DI
+public List<CustomerEntity> readCustomers()											
+	{	List<CustomerEntity> result = (List<CustomerEntity>) repositoryIoC.findAll();
 		if(result.size() > 0) {	return result;		 } 
 		else {return new ArrayList<CustomerEntity>(); }
-	}
+	}																	    // service #1
 																				 
 public CustomerEntity readOneCustomer(Long id) throws RecordNotFoundException   	
-	{	Optional<CustomerEntity> customer = repository.findById(id);
+	{	Optional<CustomerEntity> customer = repositoryIoC.findById(id);
 		if(customer.isPresent()) {return customer.get();	}
 		else {
 		throw new RecordNotFoundException("No Customer record exist for given id");	}
-	}																		  	  	// service #2
+	}																    	// service #2
 
 public CustomerEntity creatingCustomer(CustomerEntity entity) 	         		 
 	{	if(entity.getId()  == null) 
-		{	entity = repository.save(entity);			return entity;	} 
+		{	entity = repositoryIoC.save(entity);			return entity;	} 
 	else 
-		{Optional<CustomerEntity> customer = repository.findById(entity.getId());
+		{Optional<CustomerEntity> customer = repositoryIoC.findById(entity.getId());
 		if(customer.isPresent()) 
 		{	CustomerEntity newEntity = customer.get();					
 			newEntity.setFirstName(entity.getFirstName());
 			newEntity.setLastName(entity.getLastName());
 			newEntity.setEmail(entity.getEmail());	
-			newEntity = repository.save(newEntity);  	return newEntity;	} 	
-		else {entity = repository.save(entity);			return entity;		}
+			newEntity = repositoryIoC.save(newEntity);  	return newEntity;	} 	
+		else {entity = repositoryIoC.save(entity);			return entity;		}
 		}
 	} 																	     	// service #3
     public void deleteEmployeeById(Long id) throws RecordNotFoundException
-    {  Optional<CustomerEntity> employee = repository.findById(id);
-     if(employee.isPresent())
-		{   repository.deleteById(id);   } 
+    {  Optional<CustomerEntity> participant = repositoryIoC.findById(id);
+     if(participant.isPresent())
+		{   repositoryIoC.deleteById(id);   } 
 	 else {throw new RecordNotFoundException("No such record exist in the database"); }
     }																			// service #4
 }

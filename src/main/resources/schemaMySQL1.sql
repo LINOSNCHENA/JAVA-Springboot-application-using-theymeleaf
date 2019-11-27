@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS customers;
-CREATE TABLE customers
+DROP TABLE IF EXISTS participantX;
+CREATE TABLE participantX
  (
  id serial  PRIMARY KEY, -- POSTGRESS/MYSQL/MSSQ
  -- id INT AUTO_INCREMENT  PRIMARY KEY, --- h2 DataBase Version
@@ -9,12 +9,12 @@ CREATE TABLE customers
   );
 
 INSERT INTO 
-	customers (first_name, last_name, email) 
+	participantX (first_name, last_name, email) 
 VALUES
   	('David Buchizya', 'Lusaka', 'buchizyad@lusaka.com'),
  	('Xi Jinping', 'Peking', 'jinping@kitai.com'),
 	('Linos Nchena ', 'Engineer', 'linosnchena@gmail.com'),
 	('Mark Zuckerberg,', 'Technologist', 'markzuck@facebook.com'),
 	('Masautso Tembo', 'Scientist', 'matsausto@tembo.com');
-SELECT * from customers
+SELECT * from participantX
 

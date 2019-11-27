@@ -11,10 +11,10 @@
 	
 	<groupId>com.monze</groupId>
 	<artifactId>praha</artifactId>
-	<version>tompemba1</version>
+	<version>participantX</version>
 	<packaging>war</packaging>
 	<name>praha</name>
-	<description>Email-Address application in Spring-Boot</description>
+	<description>Registration of Participant at Pemba</description>
 	<properties>
 		<java.version>1.8</java.version>
 		<start-class>com.monze.praha.PrahaApplication</start-class>

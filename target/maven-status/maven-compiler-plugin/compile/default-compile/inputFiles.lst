@@ -1,6 +1,6 @@
-c:\znews\src\main\java\com\monze\praha\model\CustomerEntity.java
-c:\znews\src\main\java\com\monze\praha\service\CustomerService.java
-c:\znews\src\main\java\com\monze\praha\controller\CustomerController.java
-c:\znews\src\main\java\com\monze\praha\PrahaApplication.java
-c:\znews\src\main\java\com\monze\praha\exception\RecordNotFoundException.java
-c:\znews\src\main\java\com\monze\praha\repository\CustomerRepository.java
+c:\Users\linos\Downloads\hb2\src\main\java\com\monze\praha\exception\RecordNotFoundException.java
+c:\Users\linos\Downloads\hb2\src\main\java\com\monze\praha\repository\CustomerRepository.java
+c:\Users\linos\Downloads\hb2\src\main\java\com\monze\praha\model\CustomerEntity.java
+c:\Users\linos\Downloads\hb2\src\main\java\com\monze\praha\controller\CustomerController.java
+c:\Users\linos\Downloads\hb2\src\main\java\com\monze\praha\PrahaApplication.java
+c:\Users\linos\Downloads\hb2\src\main\java\com\monze\praha\service\CustomerService.java

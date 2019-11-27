@@ -5,9 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+// HIBERNATE STAFFS!
 @Entity
-@Table(name="customers")
+@Table(name="participantX")
 public class CustomerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +17,8 @@ public class CustomerEntity {
     @Column(name="last_name", nullable=false, length=60)
     private String lastName;    
     @Column(name="email", nullable=false, length=60)
-	private String email;
+    private String email;
+    
 	    
     public Long getId() 			{return id;	   }
 	public void setId(Long id)	    {this.id = id; }

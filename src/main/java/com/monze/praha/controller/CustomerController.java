@@ -17,32 +17,38 @@ import com.monze.praha.service.CustomerService;
 @RequestMapping("/")
 public class CustomerController 
 {	@Autowired
-	CustomerService service;
+	CustomerService serviceIoC;
 
-//http://localhost:8080/
+//http://localhost:8080/		            #1
 @RequestMapping
-	public String readCustomers(Model model) 
-	{ List<CustomerEntity> list = service.readCustomers();
-		model.addAttribute("customers", list);	return "customerDisplays";	} // current searchings
+	public String readCustomers(Model participantX) 
+	{ List<CustomerEntity> list = serviceIoC.readCustomers();
+		participantX.addAttribute("customers", list);	
+		return "customerDisplays";	
+	} 												// Current searchings
 
-// http://localhost:8080/edit[id]
+// http://localhost:8080/edit[id]		    #2
 @GetMapping(path = {"/added", "/added/{id}"})		// First and second versioning
-	public String readCustomerById(Model model, @PathVariable("id") Optional<Long> id) 
+	public String readCustomerById(Model participantX, @PathVariable("id") Optional<Long> id) 
 		throws RecordNotFoundException 
 	   {if (id.isPresent()) {
-			CustomerEntity entity = service.readOneCustomer(id.get());
-			model.addAttribute("customer", entity);		} 
-		else {	model.addAttribute("customer", new CustomerEntity());	}
+			CustomerEntity entity = serviceIoC.readOneCustomer(id.get());
+			participantX.addAttribute("customer", entity);		} 
+		else {	participantX.addAttribute("customer", new CustomerEntity());	}
 		return "customerAddition";}
 
-// http://localhost:8080/createCustomer
+// http://localhost:8080/createCustomer		#3
 @RequestMapping(path = "/createCustomer",	method = { RequestMethod.PUT, RequestMethod.POST })
-	public String createCustomer(CustomerEntity customer)  // jumps out of recreate to redirect
-	{	service.creatingCustomer(customer);		 return "redirect:/";	}
+	public String createCustomer(CustomerEntity participantX)  // Jumps out of recreate to redirect
+	{	serviceIoC.creatingCustomer(participantX);		 
+		return "redirect:/";	
+	}
 
-// http://localhost:8080/delete/[;id]
+// http://localhost:8080/delete/[;id]		#4
 @RequestMapping(path = "/delete/{id}")
 public String deleteEmployeeById(Model model, @PathVariable("id") Long id)
     throws RecordNotFoundException
-    {   service.deleteEmployeeById(id);      		     return "redirect:/";    }
+	{   serviceIoC.deleteEmployeeById(id);      		    
+		 return "redirect:/";    
+	}														// Delete
 }
