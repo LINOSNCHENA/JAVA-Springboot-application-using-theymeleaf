@@ -22,4 +22,4 @@ Open [http://localhost:8080/](http://localhost:8080/) in browser to see the appl
 
 Open [https://monze1.cfapps.io/](http://https://monze1.cfapps.io/) in browser to see deployment.
 
-[https://monze1.cfapps.io/](https://monze1.cfapps.io/)
+OPEN [https://monze1.cfapps.io/](https://monze1.cfapps.io/)
