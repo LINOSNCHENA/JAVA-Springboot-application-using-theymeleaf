@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 // HIBERNATE STAFFS!
 @Entity
-@Table(name="participantX")
+@Table(name="participantx")
 public class CustomerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -2,7 +2,7 @@
 applications:
 - name: monze1
   instances: 1
-  path: C:\TomCat\webapps\participantX.war
+  path: C:\Users\linos\Downloads\hb2\target\praha-participantX.war
   memory: 723910K
   services:
   - mysqlDB
