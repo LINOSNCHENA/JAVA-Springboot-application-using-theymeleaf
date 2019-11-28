@@ -1,4 +1,4 @@
-# Full-stack with Thyme leaf, Spring Boot-and-MySQL
+# SINGLE-FRAME WORK FULL-STACK (with Thymeleaf, Spring, Hibernate & MySQL
 
 The application is a complete system consisting of front and back end. 
 This is Spring Boot, SQL and Thyme leaf. 
@@ -6,6 +6,7 @@ The application has a deployment file filled in the manifest.
 Register for the Monze Physics Symposium participation
 
 ## Executing the application
+
 1. clone from https://github.com/LINOSNCHENA/Registration-for-Pemba-Symposium.git
 
 2. to execute application and run it following the follwing instructions
@@ -16,10 +17,17 @@ mvn clean package
 mvn spring-boot:run
 ```
 
-## Links for the development and then deployment version
+## Links for the development and deployment version
 
 Open [http://localhost:8080/](http://localhost:8080/) in browser to see the application.
 
 Open [https://monze1.cfapps.io/](https://monze1.cfapps.io/) in browser to see deployment.
 
-OPEN [https://monze1.cfapps.io/](https://monze1.cfapps.io/)
+
+## Interface UX
+
+ Below are some Screens shots from the application
+
+![ Application Muntu Interface page #1 ](https://github.com/LINOSNCHENA/Fullstack-system-in-SpringAngularMSSQL-APP/blob/master/page1.png)
+
+![ Application Muntu Interface page #2 ](https://github.com/LINOSNCHENA/Fullstack-system-in-SpringAngularMSSQL-APP/blob/master/page2.png)

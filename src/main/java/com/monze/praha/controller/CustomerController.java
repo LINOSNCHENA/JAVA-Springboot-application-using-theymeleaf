@@ -16,8 +16,7 @@ import com.monze.praha.service.CustomerService;
 @Controller
 @RequestMapping("/")
 public class CustomerController 
-{	@Autowired
-	CustomerService serviceIoC;
+{	@Autowired 	CustomerService serviceIoC;
 
 //http://localhost:8080/		            #1
 @RequestMapping
@@ -25,7 +24,7 @@ public class CustomerController
 	{ List<CustomerEntity> list = serviceIoC.readCustomers();
 		participantX.addAttribute("customers", list);	
 		return "customerDisplays";	
-	} 												// Current searchings
+	} 												 // Current searchings
 
 // http://localhost:8080/edit[id]		    #2
 @GetMapping(path = {"/added", "/added/{id}"})		// First and second versioning
