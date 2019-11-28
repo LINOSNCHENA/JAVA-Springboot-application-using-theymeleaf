@@ -28,6 +28,6 @@ Open [https://monze1.cfapps.io/](https://monze1.cfapps.io/) in browser to see de
 
  Below are some Screens shots from the application
 
-![ Application Muntu Interface page #1 ](https://github.com/LINOSNCHENA/Fullstack-system-in-SpringAngularMSSQL-APP/blob/master/page1.png)
+![ Application SingleTone Interface page #1 ](https://github.com/LINOSNCHENA/Registration-for-Pemba-Symposium/blob/master/page1.png)
 
-![ Application Muntu Interface page #2 ](https://github.com/LINOSNCHENA/Fullstack-system-in-SpringAngularMSSQL-APP/blob/master/page2.png)
+![ Application SingleTone Interface page #2 ](https://github.com/LINOSNCHENA/Registration-for-Pemba-Symposium/blob/master/page2.png)
