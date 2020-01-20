@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-C:\Users\linos\Downloads\choma3\src\main\java\com\monze\praha\controller\CustomerController.java
-C:\Users\linos\Downloads\choma3\src\main\java\com\monze\praha\service\CustomerService.java
-C:\Users\linos\Downloads\choma3\src\main\java\com\monze\praha\exception\RecordNotFoundException.java
-C:\Users\linos\Downloads\choma3\src\main\java\com\monze\praha\repository\CustomerRepository.java
-C:\Users\linos\Downloads\choma3\src\main\java\com\monze\praha\model\CustomerEntity.java
-C:\Users\linos\Downloads\choma3\src\main\java\com\monze\praha\PrahaApplication.java
-=======
-c:\Users\linos\Downloads\hb2\src\main\java\com\monze\praha\exception\RecordNotFoundException.java
-c:\Users\linos\Downloads\hb2\src\main\java\com\monze\praha\repository\CustomerRepository.java
-c:\Users\linos\Downloads\hb2\src\main\java\com\monze\praha\model\CustomerEntity.java
-c:\Users\linos\Downloads\hb2\src\main\java\com\monze\praha\controller\CustomerController.java
-c:\Users\linos\Downloads\hb2\src\main\java\com\monze\praha\PrahaApplication.java
-c:\Users\linos\Downloads\hb2\src\main\java\com\monze\praha\service\CustomerService.java
->>>>>>> ef2fb1bad39714d1526eafd537bff11cf94edd8b
+C:\Users\linos\Downloads\xmass\src\main\java\com\monze\praha\model\CustomerEntity.java
+C:\Users\linos\Downloads\xmass\src\main\java\com\monze\praha\service\CustomerService.java
+C:\Users\linos\Downloads\xmass\src\main\java\com\monze\praha\exception\RecordNotFoundException.java
+C:\Users\linos\Downloads\xmass\src\main\java\com\monze\praha\repository\CustomerRepository.java
+C:\Users\linos\Downloads\xmass\src\main\java\com\monze\praha\PrahaApplication.java
+C:\Users\linos\Downloads\xmass\src\main\java\com\monze\praha\controller\CustomerController.java

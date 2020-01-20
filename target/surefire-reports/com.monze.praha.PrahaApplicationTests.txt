@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.monze.praha.PrahaApplicationTests
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 35.074 s - in com.monze.praha.PrahaApplicationTests
-=======
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 31.303 s - in com.monze.praha.PrahaApplicationTests
->>>>>>> ef2fb1bad39714d1526eafd537bff11cf94edd8b
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 37.8 s - in com.monze.praha.PrahaApplicationTests
