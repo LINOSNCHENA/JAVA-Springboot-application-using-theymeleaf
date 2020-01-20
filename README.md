@@ -1,6 +1,6 @@
-# FRONT TO BACKEND IN ONE-FRAMEWORK (Spring,Hibernate, Thymeleaf)
+# FRONT TO BACKEND IN ONE-FRAMEWORK 
 
-The application is a full-stack application that is consisting of frontend, backend and database all in one framework. The technology stack includes; Spring Boot, Hibernate, MySQL and Thyme leaf webapp.  The main purpose of the application is to create a Register for the Monze Physics Symposium participation record. The application has a deployment file filled in the manifest hence has a production style sample as well.
+The application is a full-stack application that is consisting of frontend, backend and database all in one framework. (Spring,Hibernate, Thymeleaf). The technology stack includes; Spring Boot, Hibernate, MySQL and Thyme leaf webapp.  The main purpose of the application is to create a Register for the Monze Physics Symposium participation record. The application has a deployment file filled in the manifest hence has a production style sample as well.
 
 ## Executing the application
 
