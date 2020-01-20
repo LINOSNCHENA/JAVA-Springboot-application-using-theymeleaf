@@ -8,7 +8,7 @@ The application is a full-stack application that is consisting of frontend, back
 2. To compile the application run the first command below.
 3. To exploit the server application run it using the second command. The following are the two commands mentioned above;
 
- Two commands:  
+## Two commands:  
 ```
 mvn clean package
 mvn spring-boot:run
