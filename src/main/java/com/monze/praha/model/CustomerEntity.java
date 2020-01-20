@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+<<<<<<< HEAD
 
 // HIBERNATE STAFFS!
 @Entity
@@ -13,6 +14,14 @@ public class CustomerEntity {
     @Id
     //  @GeneratedValue(strategy = GenerationType.AUTO) // IDENTITY)
     @GeneratedValue(strategy = GenerationType.IDENTITY) // IDENTITY)
+=======
+// HIBERNATE STAFFS!
+@Entity
+@Table(name="partx")
+public class CustomerEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO) // IDENTITY)
+>>>>>>> ef2fb1bad39714d1526eafd537bff11cf94edd8b
     private Long id;    
     @Column(name="first_name")
     private String firstName;    
@@ -20,7 +29,12 @@ public class CustomerEntity {
     private String lastName;    
     @Column(name="email", nullable=false, length=60)
     private String email;
+<<<<<<< HEAD
     	    
+=======
+    
+	    
+>>>>>>> ef2fb1bad39714d1526eafd537bff11cf94edd8b
     public Long getId() 			{return id;	   }
 	public void setId(Long id)	    {this.id = id; }
 

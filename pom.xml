@@ -71,6 +71,7 @@
 	<artifactId>spring-boot-starter-tomcat</artifactId>
 	<scope>provided</scope>
  </dependency>
+<<<<<<< HEAD
 
 
  <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
@@ -92,6 +93,8 @@
     <version>2.2.4</version>
 </dependency>
 
+=======
+>>>>>>> ef2fb1bad39714d1526eafd537bff11cf94edd8b
 </dependencies>
 
 	<build>
