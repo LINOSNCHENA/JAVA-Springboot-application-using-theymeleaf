@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PrahaApplication",
+            "request": "launch",
+            "mainClass": "com.monze.praha.PrahaApplication",
+            "projectName": "praha"
+        }
+    ]
+}
