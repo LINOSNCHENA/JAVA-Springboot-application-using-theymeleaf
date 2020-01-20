@@ -24,8 +24,6 @@ Open [https://monze1.cfapps.io/](https://monze1.cfapps.io/) in browser to see de
 
  Below are some Screens shots from the application
 
-![ Application Singleton Interface page #1 ](https://github.com/LINOSNCHENA/Registration-for-Pemba-Symposium/blob/master/pemba/page1.png)
-
 ![ Application Singleton Interface page #2 ](https://github.com/LINOSNCHENA/Registration-for-Pemba-Symposium/blob/master/pemba/page2.png)
 
 ![ Application Singleton Interface page #2 ](https://github.com/LINOSNCHENA/Registration-for-Pemba-Symposium/blob/master/pemba/page3.png)
