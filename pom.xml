@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.8.RELEASE</version>
+		<version>2.3.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>	
 	
@@ -16,7 +16,7 @@
 	<name>praha</name>
 	<description>Registration of Participant at Pemba</description>
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>12</java.version>
 		<start-class>com.monze.praha.PrahaApplication</start-class>
 	</properties>
 
@@ -44,13 +44,14 @@
 <dependency>
     <groupId>mysql</groupId>
     <artifactId>mysql-connector-java</artifactId>
-    <version>8.0.17</version>
+    <version>8.0.19</version>
 </dependency>
+
 <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql Monze#2-->
 <dependency>
     <groupId>org.postgresql</groupId>
     <artifactId>postgresql</artifactId>
-    <version>42.2.8</version>
+    <version>42.2.14</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/com.microsoft.jdbc  Monze#3-->
 <dependency>
@@ -77,19 +78,19 @@
 <dependency>
     <groupId>org.hibernate</groupId>
     <artifactId>hibernate-core</artifactId>
-    <version>5.3.2.Final</version>
+    <version>5.4.19.Final</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
 <dependency>
     <groupId>org.hibernate</groupId>
     <artifactId>hibernate-entitymanager</artifactId>
-    <version>4.1.3.Final</version>
+    <version>5.4.19.Final</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
 <dependency>
     <groupId>javax.xml.bind</groupId>
     <artifactId>jaxb-api</artifactId>
-    <version>2.2.4</version>
+    <version>2.3.1</version>
 </dependency>
 
 </dependencies>
