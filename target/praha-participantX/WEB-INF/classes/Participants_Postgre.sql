@@ -13,10 +13,10 @@ INSERT INTO
 	bank2
 	(first_name, last_name, email)
 VALUES
-	('Leon Lorena Banda', 'Proffessor', 'david.banda@lsk.co.uk'),
+	('Leon Lorena', 'Professor', 'leon.lorena@lsk.co.uk'),
 	('Marcus Gavey', 'Teacher', 'mucus.gavey@jka.zm'),
 	('Nikolas Marvin ', 'Engineer', 'nikolas.marvina@gmail.ru'),
-	('Marvin Mwemba', 'Technologist', 'marvin.mwemba@pba.zm'),
+	('Postgresql Mwemba', 'Technologist', 'marvin.mwemba@pba.zm'),
 	('Elvis Presly', 'Scientist', 'elvis.presly@prg.cz');
 SELECT *
 from bank2

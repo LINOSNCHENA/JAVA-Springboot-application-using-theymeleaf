@@ -1,15 +1,16 @@
-# FULL STACK MICROSERVICE IN A SINGLE FRAMEWORK 
+# MICROSERVICES IN SPRING-BOOT FRAMEWORK 
 
-The application is a full-stack application that is consisting of frontend, backend and database all in one framework. (Spring,Hibernate, Thymeleaf). The technology stack includes; Spring Boot, Hibernate, MySQL(Postgres) and Thyme leaf webapp.  The main purpose of the application is to create a Register for participats record. The application has a deployment file filled in the manifest hence has a production style sample as well.
+The application is a full-stack application that is consisting of frontend, backend and database all in one framework. (Spring Boot, Hibernate, Thymeleaf). The technology stack includes; Spring Boot, Hibernate, MySQL (Postgres) and Thyme leaf webapp.  The main purpose of the application is to create records. The application has a deployment file filled in the manifest hence has a production style sample as well.
+
 
 ## Executing the application
 
 1. Clone the repository from https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf.git
-2. upgrade the dependancies in Maven POM.
+2.  Upgrade the dependancies in Maven POM.
 3. To compile the application run the first command below.
-4. To exploit the server application run it using the second command. The following are the two commands mentioned above;
 
 ## Execution commands:  
+
 ```
 mvn clean package
 mvn spring-boot:run
