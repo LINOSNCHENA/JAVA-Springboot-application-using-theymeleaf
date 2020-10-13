@@ -31,7 +31,10 @@ Open [http://localhost:8080/](http://localhost:8080/) in browser to see the appl
 
  Below are some Screens shots from the application
 
-![ Application Singleton Interface page #1 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/pemba/monze%20(1).png)
-![ Application Singleton Interface page #2 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/pemba/monze%20(5).png)
-![ Application Singleton Interface page #3 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/pemba/monze%20(4).png)
+![ Application Singleton Interface page #3 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/uXviews/monze%20(1).png)
+![ Application Singleton Interface page #3 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/uXviews/monze%20(2).png)
+![ Application Singleton Interface page #3 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/uXviews/monze%20(3).png)
 
+![ Application Singleton Interface page #3 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/uXviews/monze%20(4).png)
+![ Application Singleton Interface page #3 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/uXviews/monze%20(5).png)
+![ Application Singleton Interface page #3 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/uXviews/monze%20(6).png)
