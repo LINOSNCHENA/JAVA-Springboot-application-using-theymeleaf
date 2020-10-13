@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Create New Contact</title>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>ContactsAPP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+	<div align="center">	
+		<h1>Create New Contact</h1>
+		<br/>
+		<form action="#" th:action="@{/save}" th:object="${Contact}" method="post">
+			<table border="0" cellpadding="10">
+				<tr>
+					<td>Contact-Name:</td>
+					<td><input type="text" th:field="*{name}" />
+						<a><i class="fas fa-user-slash ml-2"></i></a></td>
+				</tr>
+				<tr>
+					<td>Mobile:</td>
+					<td><input type="text" th:field="*{mobile}" />
+						<a><i class="fas fa-user-slash ml-2"></i></a></td>
+				</tr>				
+				<tr>
+					<td>Office:</td>
+					<td><input type="text" th:field="*{office}" />
+						<a><i class="fas fa-user-slash ml-2"></i></a></td>
+				</tr>				
+				<tr>
+					<td>Stars:</td>
+					<td><input type="text" th:field="*{stars}" />
+						<a><i class="fas fa-user-slash ml-2"></i></a></td>
+				</tr>	
+				<tr>
+					<td>Date:</td>
+					<td><input type="text" th:field="*{created_at}" />
+						<a><i class="fas fa-user-slash ml-2"></i></a></td>
+				</tr>
+				
+				
+				<tr>
+					<td colspan="2"><button type="submit">Save</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

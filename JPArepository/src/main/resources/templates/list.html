@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>ContactBook Manager</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>ContactsAPP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div align="center">	
+		
+	<h1>CustomerBook Manager</h1>
+	
+	<a href="new">Create New ContactsContact</a>
+	
+	<br/><br/>
+	<form th:action="@{/}">
+		KeyWord: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
+		&nbsp;
+		<input type="submit" value="Search" />
+		&nbsp;
+		<input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
+	</form>
+	<br/><br/>
+	
+	<table border="1" cellpadding="10">
+		<thead>
+			<tr>
+				<th>ID No.</th>
+				<th>Name</th>
+				<th>Mobile</th>
+				<th>Office</th>
+				<th>Stars</th>		
+				<th>CreatedAt</th>		
+				
+				<th>Actions</th>				
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="Contact : ${listContacts}">
+				<td th:text="${Contact.id}">ID no.</td>
+				<td th:text="${Contact.name}">Name</td>
+				<td th:text="${Contact.mobile}">Mobile</td>
+				<td th:text="${Contact.office}">Office</td>
+				<td th:text="${Contact.stars}">Stars</td>
+				<td th:text="${Contact.created_at}">CreatedAt</td>
+				<td>
+					<a th:href="@{'/edit/' + ${Contact.id}}">Edit</a>
+					<a><i class="fas fa-user-slash ml-2"></i></a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a th:href="@{'/delete/' + ${Contact.id}}">Delete</a>
+					<a><i class="fas fa-user-slash ml-2"></i></a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<script type="text/javascript">
+	function clearSearch() {
+		window.location = "[[@{/}]]";
+	}
+</script>
+</body>
+</html>
