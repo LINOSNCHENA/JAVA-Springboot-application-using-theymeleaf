@@ -9,11 +9,10 @@ import javax.persistence.Table;
 
 // HIBERNATE STAFFS!
 @Entity
-@Table(name = "bank2")
+@Table(name = "contactsbank")
 public class CustomerEntity {
     @Id
-    // @GeneratedValue(strategy = GenerationType.AUTO) // IDENTITY)
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Long id;
     @Column(name = "first_name")
     private String firstName;

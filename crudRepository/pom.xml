@@ -16,7 +16,7 @@
 	<name>praha</name>
 	<description>Registration of Participant at Pemba</description>
 	<properties>
-		<java.version>12</java.version>
+		<java.version>15</java.version>
 		<start-class>com.monze.praha.PrahaApplication</start-class>
 	</properties>
 

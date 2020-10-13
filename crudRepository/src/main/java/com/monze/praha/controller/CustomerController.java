@@ -20,24 +20,20 @@ public class CustomerController {
 	@Autowired
 	CustomerService serviceIoC;
 
-	// http://localhost:8080/createCustomer #1
 	@RequestMapping(path = "/createCustomer", method = { RequestMethod.PUT, RequestMethod.POST })
-	public String createCustomer(CustomerEntity participantX) // Jumps out of recreate to redirect
-	{
+	public String createCustomer(CustomerEntity participantX) {
 		serviceIoC.creatingCustomer(participantX);
 		return "redirect:/";
 	}
 
-	// http://localhost:8080/ #2
 	@RequestMapping
 	public String readCustomers(Model participantX) {
 		List<CustomerEntity> list = serviceIoC.readCustomers();
 		participantX.addAttribute("customers", list);
 		return "customerDisplays";
-	} // Current searchings
+	}
 
-	// http://localhost:8080/edit[id] #3
-	@GetMapping(path = { "/added", "/added/{id}" }) // First and second versioning
+	@GetMapping(path = { "/added", "/added/{id}" })
 	public String readCustomerById(Model participantX, @PathVariable("id") Optional<Long> id)
 			throws RecordNotFoundException {
 		if (id.isPresent()) {
@@ -49,10 +45,9 @@ public class CustomerController {
 		return "customerAddition";
 	}
 
-	// http://localhost:8080/delete/[;id] #4
 	@RequestMapping(path = "/delete/{id}")
 	public String deleteEmployeeById(Model model, @PathVariable("id") Long id) throws RecordNotFoundException {
 		serviceIoC.deleteEmployeeById(id);
 		return "redirect:/";
-	} // Delete
+	}
 }
