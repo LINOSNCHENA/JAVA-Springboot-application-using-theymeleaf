@@ -12,6 +12,9 @@ The application is a full-stack application that is consisting of frontend, back
 ## Execution commands:  
 
 ```
+cd crudrepository
+cd jparepository
+---------------------
 mvn clean package
 mvn spring-boot:run
 

@@ -13,10 +13,10 @@ CREATE TABLE Contactslist
 
 INSERT INTO ContactsList
     (NAME, MOBILE, OFFICE, STARS)
-VALUES('POLICE-MOBILE', "timestamp", "22346", 7.0),
-    ('ZambiaSTARS', "MOBILE", "1235", 67.87),
-    ('POTORIKA', "MOBILE", "PUFFY", 67.87),
-    ('ZambiaSTARS', "second", "contactslits", 67.87);
+VALUES('POLICE', "879474637", "984442346", 71.010),
+    ('HOSPITAL', "89756757756", "666661235", 17.27),
+    ('FIRE', "879222221", "87333331", 63.37),
+    ('EMMERGENCY', "897111123", "89884758", 67.87);
 
 select *
 from ContactsList
