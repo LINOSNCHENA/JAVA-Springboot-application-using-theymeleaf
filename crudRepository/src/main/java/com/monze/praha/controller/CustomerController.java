@@ -30,7 +30,7 @@ public class CustomerController {
 	public String readCustomers(Model participantX) {
 		List<CustomerEntity> list = serviceIoC.readCustomers();
 		participantX.addAttribute("customers", list);
-		return "customerDisplays";
+		return "listContacts";
 	}
 
 	@GetMapping(path = { "/added", "/added/{id}" })
@@ -42,7 +42,7 @@ public class CustomerController {
 		} else {
 			participantX.addAttribute("customer", new CustomerEntity());
 		}
-		return "customerAddition";
+		return "addContact";
 	}
 
 	@RequestMapping(path = "/delete/{id}")

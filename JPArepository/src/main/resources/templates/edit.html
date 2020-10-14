@@ -13,7 +13,9 @@
 </head>
 
 <body>
-	<div align="center">
+	<div class="container my-2" align ="center">
+		<div class="card">
+			<div class="card-body">
 		<h1>Edit Contact</h1>
 		<br />
 		<form action="#" th:action="@{/save}" th:object="${Contact}" method="post">
@@ -58,6 +60,8 @@
 				</tr>
 			</table>
 		</form>
+	</div>
+		</div>
 	</div>
 </body>
 

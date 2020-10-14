@@ -14,7 +14,9 @@
 </head>
 
 <body>
-	<div align="center">
+		<div class="container my-2" align ="center">
+			<div class="card">
+				<div class="card-body">
 		<h1>Create New Contact</h1>
 		<br />
 		<form action="#" th:action="@{/save}" th:object="${Contact}" method="post">
@@ -22,27 +24,27 @@
 				<tr>
 					<td>Contact-Name:</td>
 					<td><input type="text" th:field="*{name}" />
-						<a><i class="fas fa-user-slash ml-2"></i></a></td>
+						<a><i class="fas fa-user-plus ml-2"></i></a></td>
 				</tr>
 				<tr>
 					<td>Mobile:</td>
 					<td><input type="text" th:field="*{mobile}" />
-						<a><i class="fas fa-user-slash ml-2"></i></a></td>
+						<a><i class="fas fa-user-plus ml-2"></i></a></td>
 				</tr>
 				<tr>
 					<td>Office:</td>
 					<td><input type="text" th:field="*{office}" />
-						<a><i class="fas fa-user-slash ml-2"></i></a></td>
+						<a><i class="fas fa-user-plus ml-2"></i></a></td>
 				</tr>
 				<tr>
 					<td>Stars:</td>
 					<td><input type="text" th:field="*{stars}" />
-						<a><i class="fas fa-user-slash ml-2"></i></a></td>
+						<a><i class="fas fa-user-plus ml-2"></i></a></td>
 				</tr>
 				<tr>
 					<td>Date:</td>
 					<td><input type="text" th:field="*{created_at}" />
-						<a><i class="fas fa-user-slash ml-2"></i></a></td>
+						<a><i class="fas fa-user-plus ml-2"></i></a></td>
 				</tr>
 
 				<tr>
@@ -51,6 +53,8 @@
 			</table>
 		</form>
 	</div>
+			</div>
+		</div>
 </body>
 
 </html>

@@ -10,9 +10,10 @@
 	</parent>
 	<groupId>com.monze</groupId>
 	<artifactId>pemba</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>JPA 1.0.1</version>
+		<packaging>war</packaging>
 	<name>pemba</name>
-	<description>console for contacts in phonebook</description>
+	<description>JPA Repository applications for console</description>
 
 	<properties>
 		<java.version>15</java.version>

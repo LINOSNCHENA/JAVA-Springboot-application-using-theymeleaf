@@ -11,10 +11,10 @@
 	
 	<groupId>com.monze</groupId>
 	<artifactId>praha</artifactId>
-	<version>participantX</version>
+	<version>crud 1.0.1</version>
 	<packaging>war</packaging>
 	<name>praha</name>
-	<description>Registration of Participant at Pemba</description>
+	<description>crudRepository for contacts console</description>
 	<properties>
 		<java.version>15</java.version>
 		<start-class>com.monze.praha.PrahaApplication</start-class>
@@ -72,8 +72,6 @@
 	<artifactId>spring-boot-starter-tomcat</artifactId>
 	<scope>provided</scope>
  </dependency>
-
-
  <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 <dependency>
     <groupId>org.hibernate</groupId>
@@ -92,7 +90,6 @@
     <artifactId>jaxb-api</artifactId>
     <version>2.3.1</version>
 </dependency>
-
 </dependencies>
 
 	<build>
