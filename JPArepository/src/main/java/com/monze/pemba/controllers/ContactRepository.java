@@ -3,7 +3,6 @@ package com.monze.pemba.controllers;
 import java.util.List;
 
 import com.monze.pemba.model.Contact;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

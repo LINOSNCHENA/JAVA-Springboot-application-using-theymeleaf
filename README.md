@@ -7,11 +7,13 @@ The application is a full-stack application that is consisting of frontend, back
 
 1. Clone the repository from https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf.git
 2. Update the dependancies in Maven POM.
-3. To compile the application run the first command below.
+3. Table pages 3+2+10
+4. To compile the application run the first command below.
 
 ## Execution commands:  
 
 ```
+start database server
 cd crudrepository
 cd jparepository
 ---------------------

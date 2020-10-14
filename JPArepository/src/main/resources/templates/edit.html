@@ -3,7 +3,6 @@
 
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Edit Contact</title>
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>WELCOME TO CONTACTS BOOK 3JPA</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,20 +62,5 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript">
-		function clearSearch() {
-			window.location = "[[@{/}]]";
-		}
-		function dateEvaluator() {
-
-			const today = (function () {
-				const now = new Date();
-				const month = (now.getMonth() + 1).toString().padStart(2, '0');
-				const day = now.getDate().toString().padStart(2, '0');
-				return `${now.getFullYear()}-${month}-${day}`;
-			})();
-		}
-	</script>
 </body>
-
 </html>

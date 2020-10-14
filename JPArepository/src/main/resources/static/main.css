@@ -1,29 +1,37 @@
 .hello-title{
     color: darkgreen;
+    color : greenyellow;
 }
 body{
     font-family: verdana;
+    color : greenyellow;
 }
 
 table {
    width: 700px;
+   border: 1px solid yellow;
+   color : greenyellow;
     
 }
 
 table, th, td {
-   border: 1px solid black;
+   border: 1px solid yellow;
    padding: 1px;
+   align-content: center;
+   color : greenyellow;
 }
 
 tr.header{
    background-color: #00439A;
-   color : #FFFFFF;
+   color : greenyellow;
 }
 
 tr.odd{
-   background-color: #CFCFCF;
+   background-color: orangered;
+   color : greenyellow;
 }
 
 tr.even{
    background-color: #1076F5;
+   color : greenyellow;
 }

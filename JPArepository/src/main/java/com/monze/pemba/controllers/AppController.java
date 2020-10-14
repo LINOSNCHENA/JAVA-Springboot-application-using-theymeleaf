@@ -21,7 +21,8 @@ public class AppController {
 	private ContactService service;
 
 	@RequestMapping("/")
-	public String viewHomePage(Model model, @Param("keyword") String keyword) {
+	public String viewHomePage(Model model, @Param("keyword") 
+	String keyword) {
 		List<Contact> listContacts = service.listAll(keyword);
 		model.addAttribute("listContacts", listContacts);
 		model.addAttribute("keyword", keyword);

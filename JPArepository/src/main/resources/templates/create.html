@@ -3,10 +3,9 @@
 
 <head>
 	<meta charset="ISO-8859-1">
-	<title>WELCOME TO CONTACTS BOOK 2JPA</title>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>ContactsAPP</title>
+	<title>WELCOME TO CONTACTS BOOK 2JPA</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -43,37 +42,19 @@
 						</tr>
 						<tr>
 							<td>Date:</td>
-							<td><label type="text" th:field="*{created_at}" 
-								th:value="${#dates.format(Contact.created_at, 'yyyy/mm/dd')}"
-								placeholder=yyyy/mm/dd					
-								>
+							<td><input type="text" th:field="*{created_at}" th:value="${#dates.format(Contact.created_at, 'mm/yyyy/dd')}"
+								readonly="readonly"						
+								/>
 								<a><i class="fas fa-user-plus ml-2"></i></a>
 							</td>
 						</tr>
-
 						<tr>
-							<td colspan="2"><button type="submit">Save</button></td>
+							<td colspan="2"><button type="submit">Save Contact </button></td>
 						</tr>
 					</table>
 				</form>
-				<input Type="text" name="FirstName" id="fn">
-				<input Type="text" name="LastName" id="ln">
-				<input Type="email" name="Email" id="em">
-				<button onClick="dateEvaluator()">Date Evaluator click</button>
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript">
-		function dateEvaluator() {
-			const today = (function () {
-				const now = new Date();
-				const month = (now.getMonth() + 1).toString().padStart(2, '0');
-				const day = now.getDate().toString().padStart(2, '0');
-				console.log(`${now.getFullYear()}/${month}/${day}`);
-				return `${now.getFullYear()}/${month}/${day}`;
-			})();
-		}
-	</script>
 </body>
-
 </html>

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,9 +28,13 @@ public class CustomerController {
 	}
 
 	@RequestMapping
-	public String readCustomers(Model participantX) {
+	public String readCustomers(Model participantX,@Param("keyword") String keyword) {
 		List<CustomerEntity> list = serviceIoC.readCustomers();
 		participantX.addAttribute("customers", list);
+		participantX.addAttribute("listContacts", list);
+		participantX.addAttribute("keyword", keyword);
+
+
 		return "listContacts";
 	}
 

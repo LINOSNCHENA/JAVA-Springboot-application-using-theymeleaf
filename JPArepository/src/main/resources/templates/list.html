@@ -2,9 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>WELCOME TO CONTACTS BOOK 1JPA</title>
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>ContactsAPP</title>
+	<title>WELCOME TO CONTACTS BOOK 1JPA</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -16,7 +15,7 @@
 		<div class="card">
 			<div class="card-body">
 				<br /><br />
-				<h2> Contact Book Console</h2>
+				<h1> Contact Book Console</h1>
 
 				<a><i class="fas fa-user-plus ml-2"></i></a>
 				<a href="new">Create New ContactsContact</a>
@@ -31,7 +30,8 @@
 				</form>
 				<br /><br />
 
-				<table border="1" cellpadding="10">
+				<!-- <table border="2" cellpadding="15"> -->
+					<table class="table table-striped table-responsive-md">
 					<thead>
 						<tr>
 							<th>No.</th>
@@ -69,8 +69,6 @@
 		function clearSearch() {
 			window.location = "[[@{/}]]";
 		}
-
 	</script>
 </body>
-
 </html>

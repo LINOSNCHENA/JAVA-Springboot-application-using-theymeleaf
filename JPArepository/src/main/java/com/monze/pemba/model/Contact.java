@@ -1,33 +1,29 @@
 package com.monze.pemba.model;
 
+import java.math.BigInteger;
 import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 import org.springframework.format.annotation.DateTimeFormat;
 
-// HIBERNATE STAFFS!
 @Entity
 @Table(name = "CONTACTSLIST")
-
 public class Contact {
 	private Long id;
 	private String name;
-	private String mobile;
-	private String office;
-	private float stars;
-
-	@DateTimeFormat(pattern = "yyyy/mm/dd")
+	private BigInteger mobile;
+	private BigInteger office;
+	private int stars;
+	@DateTimeFormat(pattern = "yyyy/MM/dd | - |  HH:mm:ss")
 	@Column(name = "created_at", columnDefinition = "CURRENT_TIMESTAMP")
 	private Date created_at;
 
 	public Contact() {
-		// protected Contact() {
+
 	}
 
 	@Id
@@ -45,35 +41,35 @@ public class Contact {
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.name = name.toUpperCase();
 	}
 
-	public String getMobile() {
+	public BigInteger getMobile() {
 		return mobile;
 	}
 
-	public void setMobile(String mobile) {
+	public void setMobile(BigInteger mobile) {
 		this.mobile = mobile;
 	}
 
-	public String getOffice() {
+	public BigInteger getOffice() {
 		return office;
 	}
 
-	public void setOffice(String office) {
+	public void setOffice(BigInteger office) {
 		this.office = office;
 	}
 
-	public float getStars() {
+	public int getStars() {
 		return stars;
 	}
 
-	public void setStars(float stars) {
+	public void setStars(int stars) {
 		this.stars = stars;
 	}
 
 	public void setCreated_at(Date created_at) {
-		this.created_at = new Date();// created_at;
+		this.created_at = new Date();
 	}
 
 	public Date getCreated_at() {
