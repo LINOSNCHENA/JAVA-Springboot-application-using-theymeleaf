@@ -2,9 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-
-	<title>WELCOME TO CONTACTS BOOK APPLICATION v4E</title>
-
+	<title>WELCOME TO CONTACTS BOOK 1JPA</title>
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>ContactsAPP</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,63 +12,64 @@
 </head>
 
 <body>
-    <div class="container my-2" align ="center">
-        <div class="card">
-            <div class="card-body">
-		<br /><br />
-		<h2> Contact Book Console</h2>
+	<div class="container my-2" align="center">
+		<div class="card">
+			<div class="card-body">
+				<br /><br />
+				<h2> Contact Book Console</h2>
 
-		<a><i class="fas fa-user-plus ml-2"></i></a>
-		<a href="new">Create New ContactsContact</a>
+				<a><i class="fas fa-user-plus ml-2"></i></a>
+				<a href="new">Create New ContactsContact</a>
 
-		<br /><br />
-		<form th:action="@{/}">
-			KeyWord: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
-			&nbsp;
-			<input type="submit" value="Search" />
-			&nbsp;
-			<input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
-		</form>
-		<br /><br />
+				<br /><br />
+				<form th:action="@{/}">
+					KeyWord: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
+					&nbsp;
+					<input type="submit" value="Search" />
+					&nbsp;
+					<input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
+				</form>
+				<br /><br />
 
-		<table border="1" cellpadding="10">
-			<thead>
-				<tr>
-					<th>No.</th>
-					<th>Name</th>
-					<th>Mobile</th>
-					<th>Office</th>
-					<th>Stars</th>
-					<th>CreatedAt</th>
+				<table border="1" cellpadding="10">
+					<thead>
+						<tr>
+							<th>No.</th>
+							<th>Name</th>
+							<th>Mobile</th>
+							<th>Office</th>
+							<th>Stars</th>
+							<th>CreatedAt</th>
 
-					<th>Actions</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="Contact : ${listContacts}">
-					<td th:text="${Contact.id}">ID no.</td>
-					<td th:text="${Contact.name}">Name</td>
-					<td th:text="${Contact.mobile}">Mobile</td>
-					<td th:text="${Contact.office}">Office</td>
-					<td th:text="${Contact.stars}">Stars</td>
-					<td th:text="${Contact.created_at}">CreatedAt</td>
-					<td>
-						<a th:href="@{'/edit/' + ${Contact.id}}">Edit</a>
-						<a><i class="fas fa-user-edit ml-2"></i></a>
-						&nbsp;&nbsp;&nbsp;&nbsp;
-						<a th:href="@{'/delete/' + ${Contact.id}}">Delete</a>
-						<a><i class="fas fa-user-slash ml-2"></i></a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="Contact : ${listContacts}">
+							<td th:text="${Contact.id}">ID no.</td>
+							<td th:text="${Contact.name}">Name</td>
+							<td th:text="${Contact.mobile}">Mobile</td>
+							<td th:text="${Contact.office}">Office</td>
+							<td th:text="${Contact.stars}">Stars</td>
+							<td th:text="${Contact.created_at}">CreatedAt</td>
+							<td>
+								<a th:href="@{'/edit/' + ${Contact.id}}">Edit</a>
+								<a><i class="fas fa-user-edit ml-2"></i></a>
+								&nbsp;&nbsp;&nbsp;&nbsp;
+								<a th:href="@{'/delete/' + ${Contact.id}}">Delete</a>
+								<a><i class="fas fa-user-slash ml-2"></i></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
 	</div>
-</div>
-</div>
 	<script type="text/javascript">
 		function clearSearch() {
 			window.location = "[[@{/}]]";
 		}
+
 	</script>
 </body>
 

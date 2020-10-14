@@ -5,7 +5,7 @@
 	<meta charset="ISO-8859-1">
 	<title>Edit Contact</title>
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>WELCOME TO CONTACTS BOOK APPLICATION v4D</title>
+	<title>WELCOME TO CONTACTS BOOK 3JPA</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -13,56 +13,70 @@
 </head>
 
 <body>
-	<div class="container my-2" align ="center">
+	<div class="container my-2" align="center">
 		<div class="card">
 			<div class="card-body">
-		<h1>Edit Contact</h1>
-		<br />
-		<form action="#" th:action="@{/save}" th:object="${Contact}" method="post">
-			<table border="0" cellpadding="10">
-				<tr>
-					<td>ID no.:</td>
-					<td><input type="text" th:field="*{id}" readonly="readonly" /></td>
-				</tr>
-				<tr>
-					<td>Contact Name:</td>
-					<td><input type="text" th:field="*{name}" />
-						<a><i class="fas fa-user-edit ml-2"></i></a>
-					</td>
-				</tr>
-				<tr>
-					<td>Mobile No.:</td>
-					<td><input type="text" th:field="*{mobile}" />
-						<a><i class="fas fa-user-edit ml-2"></i></a>
-					</td>
-				</tr>
-				<tr>
-					<td>Office No. :</td>
-					<td><input type="text" th:field="*{office}" />
-						<a><i class="fas fa-user-edit ml-2"></i></a>
-					</td>
-				</tr>
-				<tr>
-					<td>Stars :</td>
-					<td><input type="text" th:field="*{stars}" />
-						<a><i class="fas fa-user-edit ml-2"></i></a>
-					</td>
-				</tr>
+				<h1>Edit Contact</h1>
+				<br />
+				<form action="#" th:action="@{/save}" th:object="${Contact}" method="post">
+					<table border="0" cellpadding="10">
+						<tr>
+							<td>ID no.:</td>
+							<td><input type="text" th:field="*{id}" readonly="readonly" /></td>
+						</tr>
+						<tr>
+							<td>Contact Name:</td>
+							<td><input type="text" th:field="*{name}" />
+								<a><i class="fas fa-user-edit ml-2"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td>Mobile No.:</td>
+							<td><input type="text" th:field="*{mobile}" />
+								<a><i class="fas fa-user-edit ml-2"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td>Office No. :</td>
+							<td><input type="text" th:field="*{office}" />
+								<a><i class="fas fa-user-edit ml-2"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td>Stars :</td>
+							<td><input type="text" th:field="*{stars}" />
+								<a><i class="fas fa-user-edit ml-2"></i></a>
+							</td>
+						</tr>
 
-				<tr>
-					<td>Date:</td>
-					<td><input type="text" th:field="*{created_at}" />
-						<a><i class="fas fa-user-edit ml-2"></i></a>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2"><button type="submit">Save</button></td>
-				</tr>
-			</table>
-		</form>
-	</div>
+						<tr>
+							<td>Date:</td>
+							<td><input type="text" th:field="*{created_at}" />
+								<a><i class="fas fa-user-edit ml-2"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2"><button type="submit">Save</button></td>
+						</tr>
+					</table>
+				</form>
+			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+		function clearSearch() {
+			window.location = "[[@{/}]]";
+		}
+		function dateEvaluator() {
+
+			const today = (function () {
+				const now = new Date();
+				const month = (now.getMonth() + 1).toString().padStart(2, '0');
+				const day = now.getDate().toString().padStart(2, '0');
+				return `${now.getFullYear()}-${month}-${day}`;
+			})();
+		}
+	</script>
 </body>
 
 </html>

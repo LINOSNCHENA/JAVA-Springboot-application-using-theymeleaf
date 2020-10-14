@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="ISO-8859-1">
-	<title>WELCOME TO CONTACTS BOOK APPLICATION v4C</title>
+	<title>WELCOME TO CONTACTS BOOK 2JPA</title>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>ContactsAPP</title>
@@ -14,47 +14,66 @@
 </head>
 
 <body>
-		<div class="container my-2" align ="center">
-			<div class="card">
-				<div class="card-body">
-		<h1>Create New Contact</h1>
-		<br />
-		<form action="#" th:action="@{/save}" th:object="${Contact}" method="post">
-			<table border="0" cellpadding="10">
-				<tr>
-					<td>Contact-Name:</td>
-					<td><input type="text" th:field="*{name}" />
-						<a><i class="fas fa-user-plus ml-2"></i></a></td>
-				</tr>
-				<tr>
-					<td>Mobile:</td>
-					<td><input type="text" th:field="*{mobile}" />
-						<a><i class="fas fa-user-plus ml-2"></i></a></td>
-				</tr>
-				<tr>
-					<td>Office:</td>
-					<td><input type="text" th:field="*{office}" />
-						<a><i class="fas fa-user-plus ml-2"></i></a></td>
-				</tr>
-				<tr>
-					<td>Stars:</td>
-					<td><input type="text" th:field="*{stars}" />
-						<a><i class="fas fa-user-plus ml-2"></i></a></td>
-				</tr>
-				<tr>
-					<td>Date:</td>
-					<td><input type="text" th:field="*{created_at}" />
-						<a><i class="fas fa-user-plus ml-2"></i></a></td>
-				</tr>
+	<div class="container my-2" align="center">
+		<div class="card">
+			<div class="card-body">
+				<h1>Create New Contact</h1>
+				<br />
+				<form action="#" th:action="@{/save}" th:object="${Contact}" method="post">
+					<table border="0" cellpadding="10">
+						<tr>
+							<td>Contact-Name:</td>
+							<td><input type="text" th:field="*{name}" />
+								<a><i class="fas fa-user-plus ml-2"></i></a></td>
+						</tr>
+						<tr>
+							<td>Mobile:</td>
+							<td><input type="text" th:field="*{mobile}" />
+								<a><i class="fas fa-user-plus ml-2"></i></a></td>
+						</tr>
+						<tr>
+							<td>Office:</td>
+							<td><input type="text" th:field="*{office}" />
+								<a><i class="fas fa-user-plus ml-2"></i></a></td>
+						</tr>
+						<tr>
+							<td>Stars:</td>
+							<td><input type="text" th:field="*{stars}" />
+								<a><i class="fas fa-user-plus ml-2"></i></a></td>
+						</tr>
+						<tr>
+							<td>Date:</td>
+							<td><label type="text" th:field="*{created_at}" 
+								th:value="${#dates.format(Contact.created_at, 'yyyy/mm/dd')}"
+								placeholder=yyyy/mm/dd					
+								>
+								<a><i class="fas fa-user-plus ml-2"></i></a>
+							</td>
+						</tr>
 
-				<tr>
-					<td colspan="2"><button type="submit">Save</button></td>
-				</tr>
-			</table>
-		</form>
-	</div>
+						<tr>
+							<td colspan="2"><button type="submit">Save</button></td>
+						</tr>
+					</table>
+				</form>
+				<input Type="text" name="FirstName" id="fn">
+				<input Type="text" name="LastName" id="ln">
+				<input Type="email" name="Email" id="em">
+				<button onClick="dateEvaluator()">Date Evaluator click</button>
 			</div>
 		</div>
+	</div>
+	<script type="text/javascript">
+		function dateEvaluator() {
+			const today = (function () {
+				const now = new Date();
+				const month = (now.getMonth() + 1).toString().padStart(2, '0');
+				const day = now.getDate().toString().padStart(2, '0');
+				console.log(`${now.getFullYear()}/${month}/${day}`);
+				return `${now.getFullYear()}/${month}/${day}`;
+			})();
+		}
+	</script>
 </body>
 
 </html>

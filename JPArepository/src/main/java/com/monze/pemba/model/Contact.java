@@ -2,11 +2,14 @@ package com.monze.pemba.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 // HIBERNATE STAFFS!
 @Entity
@@ -18,10 +21,13 @@ public class Contact {
 	private String mobile;
 	private String office;
 	private float stars;
+
+	@DateTimeFormat(pattern = "yyyy/mm/dd")
+	@Column(name = "created_at", columnDefinition = "CURRENT_TIMESTAMP")
 	private Date created_at;
 
 	public Contact() {
-		//protected Contact() {
+		// protected Contact() {
 	}
 
 	@Id
@@ -67,16 +73,16 @@ public class Contact {
 	}
 
 	public void setCreated_at(Date created_at) {
-		this.created_at = created_at;
+		this.created_at = new Date();// created_at;
 	}
 
 	public Date getCreated_at() {
-		return created_at;
+		return new Date();
 	}
 
 	@Override
 	public String toString() {
-		return "Contact [id=" + id + ", name=" + name + ", mobile=" + mobile + ", office=" + office + ", price=" + stars
+		return "Contact [id=" + id + ", name=" + name + ", mobile=" + mobile + ", office=" + office + ", stars=" + stars
 				+ ", created_at=" + created_at + "]";
 	}
 }
