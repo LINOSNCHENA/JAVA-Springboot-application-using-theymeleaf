@@ -14,6 +14,7 @@ The application is a full-stack application that is consisting of frontend, back
 
 ```
 start database server
+----------------------
 cd crudrepository
 cd jparepository
 ---------------------

@@ -1,6 +1,6 @@
-C:\Users\linos\Downloads\vn1\crudRepository\src\main\java\com\monze\praha\model\Customerentity.java
-C:\Users\linos\Downloads\vn1\crudRepository\src\main\java\com\monze\praha\repository\CustomerRepository.java
-C:\Users\linos\Downloads\vn1\crudRepository\src\main\java\com\monze\praha\exception\RecordNotFoundException.java
-C:\Users\linos\Downloads\vn1\crudRepository\src\main\java\com\monze\praha\service\CustomerService.java
-C:\Users\linos\Downloads\vn1\crudRepository\src\main\java\com\monze\praha\controller\CustomerController.java
-C:\Users\linos\Downloads\vn1\crudRepository\src\main\java\com\monze\praha\PrahaApplication.java
+C:\Users\linos\Downloads\search1\crudRepository\src\main\java\com\monze\praha\exception\RecordNotFoundException.java
+C:\Users\linos\Downloads\search1\crudRepository\src\main\java\com\monze\praha\repository\CustomaRepository.java
+C:\Users\linos\Downloads\search1\crudRepository\src\main\java\com\monze\praha\service\CustomaService.java
+C:\Users\linos\Downloads\search1\crudRepository\src\main\java\com\monze\praha\PrahaApplication.java
+C:\Users\linos\Downloads\search1\crudRepository\src\main\java\com\monze\praha\model\Customa.java
+C:\Users\linos\Downloads\search1\crudRepository\src\main\java\com\monze\praha\controller\CustomaController.java

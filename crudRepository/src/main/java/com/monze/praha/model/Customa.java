@@ -9,8 +9,8 @@ import javax.persistence.Table;
 
 // HIBERNATE STAFFS!
 @Entity
-@Table(name = "Customerentity")
-public class Customerentity {
+@Table(name = "CUSTOMERLIST")
+public class Customa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Long id;
@@ -30,19 +30,19 @@ public class Customerentity {
     }
 
     public String getFirstname() {
-        return firstname;
+        return firstname.toUpperCase();
     }
 
     public void setFirstname(String firstname) {
-        this.firstname = firstname;
+        this.firstname = firstname.toUpperCase();
     }
 
     public String getLastname() {
-        return lastname;
+        return lastname.toUpperCase();
     }
 
     public void setLastname(String lastname) {
-        this.lastname = lastname;
+        this.lastname = lastname.toUpperCase();
     }
 
     public String getEmail() {

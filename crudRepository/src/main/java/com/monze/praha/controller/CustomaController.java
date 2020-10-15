@@ -2,9 +2,9 @@ package com.monze.praha.controller;
 
 import java.util.List;
 import java.util.Optional;
-
 import com.monze.praha.exception.RecordNotFoundException;
-import com.monze.praha.service.CustomerService;
+import com.monze.praha.model.Customa;
+import com.monze.praha.service.CustomaService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
@@ -15,37 +15,36 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.monze.praha.model.Customerentity;
+
 
 @Controller
 @RequestMapping("/")
-public class CustomerController {
+public class CustomaController {
 	@Autowired
-	CustomerService serviceIoC;
+	CustomaService serviceIoC;
 
 	@RequestMapping(path = "/createCustomer", method = { RequestMethod.PUT, RequestMethod.POST })
-	public String createCustomer(Customerentity participantX) {
-		serviceIoC.creatingCustomer(participantX);
+	public String createCustomer(Customa customaX) {
+		serviceIoC.creatingCustomer(customaX);
 		return "redirect:/";
 	}
 
 	@RequestMapping
-	public String readCustomers(Model participantX,@Param("keyword") String keyword) {
-		List<Customerentity> customers = serviceIoC.readCustomers(keyword);
-		participantX.addAttribute("customers", customers);
-		//participantX.addAttribute("listContacts", list);
-		participantX.addAttribute("keyword", keyword);
+	public String readCustomers(Model customaX, @Param("keyword") String keyword) {
+		List<Customa> customaList = serviceIoC.readCustomers(keyword);
+		customaX.addAttribute("customaList", customaList);
+		customaX.addAttribute("keyword", keyword);
 		return "listContacts";
 	}
 
 	@GetMapping(path = { "/added", "/added/{id}" })
-	public String readCustomerById(Model participantX, @PathVariable("id") Optional<Long> id)
+	public String readCustomerById(Model customaX, @PathVariable("id") Optional<Long> id)
 			throws RecordNotFoundException {
 		if (id.isPresent()) {
-			Customerentity entity = serviceIoC.readOneCustomer(id.get());
-			participantX.addAttribute("customer", entity);
+			Customa entity = serviceIoC.readOneCustomer(id.get());
+			customaX.addAttribute("customer", entity);
 		} else {
-			participantX.addAttribute("customer", new Customerentity());
+			customaX.addAttribute("customer", new Customa());
 		}
 		return "addContact";
 	}

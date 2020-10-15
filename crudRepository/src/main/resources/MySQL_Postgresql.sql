@@ -1,6 +1,6 @@
 use presly;
-DROP TABLE IF EXISTS Customerentity;
-CREATE TABLE Customerentity
+DROP TABLE IF EXISTS CUSTOMERLIST;
+CREATE TABLE CUSTOMERLIST
 (
 	id serial PRIMARY KEY,
 	firstname VARCHAR
@@ -12,13 +12,13 @@ CREATE TABLE Customerentity
 );
 
 INSERT INTO 
-	Customerentity
+	CUSTOMERLIST
 	(firstname, lastname, email)
 VALUES
-	('Catherine Nchena', 'Teacher', 'cathy.phiri@lsk.co.uk'),
-	('Diana Merphias', 'Teacher', 'mucus.gavey@jka.zm'),
+	('NORIA Nicoles', 'Teacher', 'cathy.phiri@lsk.co.uk'),
+	('Diana Lorena', 'Science', 'leon.lorena@kzn.zm'),
 	('Nikolas Marvin ', 'Engineer', 'nikolas.marvina@gmail.ru'),
-	('Kelvin Mwemba', 'Nurse', 'marvin.mwemba@pba.zm'),
-	('Elvis Presly', 'Scientist', 'elvis.presly@prg.cz');
+	('SEARCH WORKS', 'Nurse', 'marvin.works@pba.zm'),
+	('Elvis Presly', 'Developer', 'elvis.presly@prg.cz');
 SELECT *
-from Customerentity
+from CUSTOMERLIST

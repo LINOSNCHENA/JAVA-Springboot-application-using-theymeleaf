@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>WELCOME TO CONTACTS BOOK 1CRUD</title>
+    <title>WELCOME TO CONTACTS BOOK 1CRUD</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -12,15 +12,19 @@
 </head>
 
 <body>
-    <div class="container my-2" align ="center">
+    <div class="container my-2" align="center">
         <div class="card">
             <div class="card-body">
                 <h2> Contact Book Console</h2>
-                <div th:switch="${customers}" class="container my-2">
+                <div th:switch="${customaList}" class="container my-2">
+                    <!-- xxxxxxxxxxxxxxxxx -->
+                    <br>
                     <p class="my-12">
                         <a href="added" class="btn btn-primary">
-                            <i class="fas fa-user-plus ml-2"> Data entry for new memeber registration</i></a> </p>
+                            <i class="fas fa-user-plus ml-2"> Data entry for new customa registration</i></a> </p>
                     <div class="col-md-13">
+
+                        <!-- xxxxxxxxxxxxxxxxx -->
                         <div class="filters row">
                             <div class="form-group col-sm-3">
                                 <input placeholder="Search" v-model="searchKey" class="form-control" id="search-element"
@@ -28,14 +32,16 @@
                             </div>
                         </div>
 
-<!-- xxxxxxxxxxxxxxxxx -->
-                        <form th:action="@{/}">
-                            Filter: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
+                        <!-- xxxxxxxxxxxxxxxxx -->
+                        <form name="myForm" th:action="@{/}">
+                            Keyword - filter : <input type="text" name="keyword" id="keyword" size="60"
+                                th:value="${keyword}" required />
                             &nbsp;
                             <input type="submit" value="Search" />
                             &nbsp;
-                            <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
+                            <input type="button" value="Clear" id="btnClear" onclick="fullCustomaList()" />
                         </form>
+                        <br>
                         <!-- xxxxxxxxxxxxxxxxxx -->
                         <h2 th:case="null">No record found !!</h2>
                         <div th:case="*">
@@ -51,7 +57,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr th:each="customer : ${customers}">
+                                    <tr th:each="customer : ${customaList}">
                                         <td th:text="${customer.id}"></td>
                                         <td th:text="${customer.firstname}"></td>
                                         <td th:text="${customer.lastname}"></td>
@@ -72,9 +78,10 @@
         </div>
     </div>
     <script type="text/javascript">
-        function clearSearch() {
+        function fullCustomaList() {
             window.location = "[[@{/}]]";
         }
     </script>
 </body>
+
 </html>
