@@ -20,9 +20,13 @@
                     <!-- xxxxxxxxxxxxxxxxx -->
                     <br>
                     <p class="my-12">
-                        <a href="added" class="btn btn-primary">
+                           <!-- <a href="added" class="btn btn-primary"> -->
+                                <a href="added" class="btn btn-primary">
                             <i class="fas fa-user-plus ml-2"> Data entry for new customa registration</i></a> </p>
                     <div class="col-md-13">
+
+                        <a><i class="fas fa-user-plus ml-2"></i></a>
+                        <a href="new">2-Create New ContactsContact</a>
 
                         <!-- xxxxxxxxxxxxxxxxx -->
                         <div class="filters row">
@@ -54,11 +58,12 @@
                                         <th>Email-Address</th>
                                         <th>Update</th>
                                         <th>Delete</th>
+                                        <th>Create</th>    
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- <tr th:each="customer : ${customaList}"> -->
-                                        <tr th:each="customerX : ${customaList}">
+     
+                                    <tr th:each="customerX : ${customaList}">
                                         <td th:text="${customerX.id}"></td>
                                         <td th:text="${customerX.firstname}"></td>
                                         <td th:text="${customerX.lastname}"></td>
@@ -69,6 +74,9 @@
                                         <td><a th:href="@{/delete/{id}(id=${customerX.id})}"
                                                 class="btn btn-danger btn-xs">
                                                 <i class="fas fa-user-slash ml-2"></i></a></td>
+                                        <td><a th:href="@{'/edit/' + ${customerX.id}}">Edit</a>
+                                                <a><i class="fas fa-user-edit ml-2"></i></a>                                     
+                                            </td>
                                     </tr>
                                 </tbody>
                             </table>

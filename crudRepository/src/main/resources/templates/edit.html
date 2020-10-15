@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>WELCOME TO CONTACTS BOOK 3JPA</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container my-2" align="center">
+		<div class="card">
+			<div class="card-body">
+				<h1>Edit Contact</h1>
+				<br />
+				<form action="#" th:action="@{/save}" th:object="${Customa}" method="post">
+					<table border="0" cellpadding="10">
+						<tr>
+							<td>ID no.:</td>
+							<td><input type="text" th:field="*{id}" readonly="readonly" /></td>
+						</tr>
+	
+						<tr>
+							<td>FirstName .:</td>
+							<td><input type="text" th:field="*{firstname}" />
+								<a><i class="fas fa-user-edit ml-2"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td>LastName :</td>
+							<td><input type="text" th:field="*{lastname}" />
+								<a><i class="fas fa-user-edit ml-2"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td>Emails :</td>
+							<td><input type="text" th:field="*{email}" />
+								<a><i class="fas fa-user-edit ml-2"></i></a>
+							</td>
+						</tr>
+
+						<td colspan="2"><button type="submit">Save</button></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
