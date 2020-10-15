@@ -1,19 +1,19 @@
 use presly;
-DROP TABLE IF EXISTS contactsbank;
-CREATE TABLE contactsbank
+DROP TABLE IF EXISTS Customerentity;
+CREATE TABLE Customerentity
 (
 	id serial PRIMARY KEY,
-	first_name VARCHAR
+	firstname VARCHAR
 	(250) NOT NULL,
-	last_name VARCHAR
+	lastname VARCHAR
 	(250) NOT NULL,
 	email VARCHAR
 	(250) DEFAULT NULL
 );
 
 INSERT INTO 
-	contactsbank
-	(first_name, last_name, email)
+	Customerentity
+	(firstname, lastname, email)
 VALUES
 	('Catherine Nchena', 'Teacher', 'cathy.phiri@lsk.co.uk'),
 	('Diana Merphias', 'Teacher', 'mucus.gavey@jka.zm'),
@@ -21,4 +21,4 @@ VALUES
 	('Kelvin Mwemba', 'Nurse', 'marvin.mwemba@pba.zm'),
 	('Elvis Presly', 'Scientist', 'elvis.presly@prg.cz');
 SELECT *
-from contactsbank
+from Customerentity

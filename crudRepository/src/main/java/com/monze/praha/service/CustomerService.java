@@ -7,7 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.monze.praha.exception.RecordNotFoundException;
-import com.monze.praha.model.CustomerEntity;
+import com.monze.praha.model.Customerentity;
 import com.monze.praha.repository.CustomerRepository;
 
 @Service
@@ -15,16 +15,16 @@ public class CustomerService {
 	@Autowired
 	CustomerRepository repositoryIoC;
 
-	public CustomerEntity creatingCustomer(CustomerEntity entity) {
+	public Customerentity creatingCustomer(Customerentity entity) {
 		if (entity.getId() == null) {
 			entity = repositoryIoC.save(entity);
 			return entity;
 		} else {
-			Optional<CustomerEntity> customer = repositoryIoC.findById(entity.getId());
+			Optional<Customerentity> customer = repositoryIoC.findById(entity.getId());
 			if (customer.isPresent()) {
-				CustomerEntity newEntity = customer.get();
-				newEntity.setFirstName(entity.getFirstName());
-				newEntity.setLastName(entity.getLastName());
+				Customerentity newEntity = customer.get();
+				newEntity.setFirstname(entity.getFirstname());
+				newEntity.setLastname(entity.getLastname());
 				newEntity.setEmail(entity.getEmail());
 				newEntity = repositoryIoC.save(newEntity);
 				return newEntity;
@@ -35,17 +35,25 @@ public class CustomerService {
 		}
 	} // service #1 & sevice #3
 
-	public List<CustomerEntity> readCustomers() {
-		List<CustomerEntity> result = (List<CustomerEntity>) repositoryIoC.findAll();
+	public List<Customerentity> readCustomers(String keyword) {
+		List<Customerentity> result;
+		
+		if(keyword!=null)
+		{
+		result= (List<Customerentity>) repositoryIoC.findByLastname(keyword);
+		}
+		else{result= (List<Customerentity>) repositoryIoC.findAll();}
+
+
 		if (result.size() > 0) {
 			return result;
 		} else {
-			return new ArrayList<CustomerEntity>();
+			return new ArrayList<Customerentity>();
 		}
 	} // service #2A
 
-	public CustomerEntity readOneCustomer(Long id) throws RecordNotFoundException {
-		Optional<CustomerEntity> customer = repositoryIoC.findById(id);
+	public Customerentity readOneCustomer(Long id) throws RecordNotFoundException {
+		Optional<Customerentity> customer = repositoryIoC.findById(id);
 		if (customer.isPresent()) {
 			return customer.get();
 		} else {
@@ -54,7 +62,7 @@ public class CustomerService {
 	} // service #2B
 
 	public void deleteEmployeeById(Long id) throws RecordNotFoundException {
-		Optional<CustomerEntity> participant = repositoryIoC.findById(id);
+		Optional<Customerentity> participant = repositoryIoC.findById(id);
 		if (participant.isPresent()) {
 			repositoryIoC.deleteById(id);
 		} else {

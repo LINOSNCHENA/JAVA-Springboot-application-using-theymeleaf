@@ -9,15 +9,15 @@ import javax.persistence.Table;
 
 // HIBERNATE STAFFS!
 @Entity
-@Table(name = "contactsbank")
-public class CustomerEntity {
+@Table(name = "Customerentity")
+public class Customerentity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Long id;
-    @Column(name = "first_name")
-    private String firstName;
-    @Column(name = "last_name", nullable = false, length = 60)
-    private String lastName;
+    @Column(name = "firstname")
+    private String firstname;
+    @Column(name = "lastname", nullable = false, length = 60)
+    private String lastname;
     @Column(name = "email", nullable = false, length = 60)
     private String email;
 
@@ -29,20 +29,20 @@ public class CustomerEntity {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public String getEmail() {

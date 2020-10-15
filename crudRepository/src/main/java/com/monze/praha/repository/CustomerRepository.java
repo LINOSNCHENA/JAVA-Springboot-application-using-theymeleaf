@@ -5,12 +5,12 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
-import com.monze.praha.model.CustomerEntity;
+import com.monze.praha.model.Customerentity;
 
 @Repository
-public interface CustomerRepository extends CrudRepository<CustomerEntity, Long> {
-	@Query("SELECT X FROM CustomerEntity X WHERE CONCAT(X.firstName, ' ', X.lastName, ' ', X.email) LIKE %?1%")
-	 List<CustomerEntity> findByLastname(String lastname);
+public interface CustomerRepository extends CrudRepository<Customerentity, Long> {
+	@Query("SELECT X FROM Customerentity X WHERE CONCAT(X.firstname, ' ', X.lastname, ' ', X.email) LIKE %?1%")
+	 List<Customerentity> findByLastname(String keyword);
+	 //  List<CustomerEntity> findByLastname(String lastname);
 	// User findByEmailAddress(String emailAddress);
 }
