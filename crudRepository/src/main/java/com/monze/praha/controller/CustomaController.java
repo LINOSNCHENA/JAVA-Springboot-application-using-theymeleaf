@@ -2,6 +2,7 @@ package com.monze.praha.controller;
 
 import java.util.List;
 import java.util.Optional;
+
 import com.monze.praha.exception.RecordNotFoundException;
 import com.monze.praha.model.Customa;
 import com.monze.praha.service.CustomaService;
@@ -32,12 +33,18 @@ public class CustomaController {
 	@GetMapping(path = { "/added", "/added/{id}" })
 	public String readCustomerById(Model customaX, @PathVariable("id") Optional<Long> id)
 			throws RecordNotFoundException {
-	//	if (id.isPresent()) {
+		if (id.isPresent()) {
 			Customa entity = serviceIoC.readOneCustomer(id.get());
 			customaX.addAttribute("customer", entity);
-	//	} else {
-		//	customaX.addAttribute("customer", new Customa());
-	//	}
+			System.out.print("\n ======================PRESENT===============\n ");
+			System.out.print("\n ====================== "+entity.getId()+" ===============\n ");
+			System.out.print("\n ======================PRESENT===============\n ");
+		} else {
+			customaX.addAttribute("customer", new Customa());
+			System.out.print("\n ======================ABSENT===============\n");
+			System.out.print("\n ====================="+id+"===============\n");
+			System.out.print("\n ======================ABSENT===============\n");
+		}
 		return "addContact";
 	}
 

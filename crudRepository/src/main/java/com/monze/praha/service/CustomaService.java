@@ -34,41 +34,41 @@ public Customa readOneCustomer(Long id) throws RecordNotFoundException {
 } // service #4
 	// service #1 Creating
 
-	public Customa creatingCustomer(Customa entity) {
-			//	if (entity.getId() == null) {
-					if (entity.getLastname() == null) {
+	public Customa creatingCustomer(Customa customaX) {
+			//	if (customaX.getId() == null) {
+					if (customaX.getLastname() != null) {
 			System.out.println("\n ================== CREATE ONE ========================================\n");
-			System.out.println(" Employee number: "+entity.getLastname()+" is CREATED 1=========\n");
-			System.out.println(" Employee number: "+entity.getFirstname()+" is CREATED 1=========\n");
-			System.out.println(" Employee number: "+entity.getId()+" is CREATED 1=========\n");
+			System.out.println(" Employee number: "+customaX.getLastname()+" is CREATED 1=========\n");
+			System.out.println(" Employee number: "+customaX.getFirstname()+" is CREATED 1=========\n");
+			System.out.println(" Employee number: "+customaX.getId()+" is CREATED 1=========\n");
 			System.out.println("====================================================================\n");
-			entity = repositoryIoC.save(entity);
-			return entity;
+			customaX = repositoryIoC.save(customaX);
+			return customaX;
 		} else {
 		
 				System.out.println("\n ================== EDIT ONE ========================================\n");
-				System.out.println(" Employee number: "+entity.getLastname()+" is EDITED 2=========\n");
-				System.out.println(" Employee number: "+entity.getFirstname()+" is EDITED 2=========\n");
-				System.out.println(" Employee number: "+entity.getId()+" is EDITED 2=========\n");
+				System.out.println(" Employee number: "+customaX.getLastname()+" is EDITED 2=========\n");
+				System.out.println(" Employee number: "+customaX.getFirstname()+" is EDITED 2=========\n");
+				System.out.println(" Employee number: "+customaX.getId()+" is EDITED 2=========\n");
 				System.out.println("======================END ==============================================\n");
-			//	Customa customer = entity;// repositoryIoC.findById(entity.getId());
-				//Optional<Customa> customer = repositoryIoC.findById(entity.getId());
+			//	Customa customer = customaX;// repositoryIoC.findById(customaX.getId());
+				//Optional<Customa> customer = repositoryIoC.findById(customaX.getId());
 			//	if (customer.isPresent()) {
-				Customa newEntity=entity;// =null;//= customer.get();
-				newEntity.setFirstname(entity.getFirstname());
-				newEntity.setLastname(entity.getLastname());
-				newEntity.setEmail(entity.getEmail());
+				Customa newEntity=customaX;// =null;//= customer.get();
+				newEntity.setFirstname(customaX.getFirstname());
+				newEntity.setLastname(customaX.getLastname());
+				newEntity.setEmail(customaX.getEmail());
 				newEntity = repositoryIoC.save(newEntity);
 				return newEntity;
 		//	} 
 			// else {			
 			// 	System.out.println("\n ================== EDIT TWO ========================================\n");
-			// 	System.out.println(" Employee number: "+entity.getLastname()+" is THIRD =========\n");
-			// 	System.out.println(" Employee number: "+entity.getFirstname()+" is THIRD =========\n");
-			// 	System.out.println(" Employee number: "+entity.getId()+" is THIRD =========\n");
+			// 	System.out.println(" Employee number: "+customaX.getLastname()+" is THIRD =========\n");
+			// 	System.out.println(" Employee number: "+customaX.getFirstname()+" is THIRD =========\n");
+			// 	System.out.println(" Employee number: "+customaX.getId()+" is THIRD =========\n");
 			// 	System.out.println("=======================END=========================================\n");
-			// 	entity = repositoryIoC.save(entity);
-			// 	return entity;
+			// 	customaX = repositoryIoC.save(customaX);
+			// 	return customaX;
 			// }
 		}
 	} // service #2 & sevice #3
