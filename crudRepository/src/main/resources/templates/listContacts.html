@@ -57,15 +57,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr th:each="customer : ${customaList}">
-                                        <td th:text="${customer.id}"></td>
-                                        <td th:text="${customer.firstname}"></td>
-                                        <td th:text="${customer.lastname}"></td>
-                                        <td th:text="${customer.email}"></td>
-                                        <td><a th:href="@{/added/{id}(id=${customer.id})}"
+                                    <!-- <tr th:each="customer : ${customaList}"> -->
+                                        <tr th:each="customerX : ${customaList}">
+                                        <td th:text="${customerX.id}"></td>
+                                        <td th:text="${customerX.firstname}"></td>
+                                        <td th:text="${customerX.lastname}"></td>
+                                        <td th:text="${customerX.email}"></td>
+                                        <td><a th:href="@{/added/{id}(id=${customerX.id})}"
                                                 class="btn btn-warning btn-xs">
                                                 <i class="fas fa-user-edit ml-2"></i></a></td>
-                                        <td><a th:href="@{/delete/{id}(id=${customer.id})}"
+                                        <td><a th:href="@{/delete/{id}(id=${customerX.id})}"
                                                 class="btn btn-danger btn-xs">
                                                 <i class="fas fa-user-slash ml-2"></i></a></td>
                                     </tr>

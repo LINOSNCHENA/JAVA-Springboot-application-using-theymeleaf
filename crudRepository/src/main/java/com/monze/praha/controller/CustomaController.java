@@ -15,19 +15,45 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-
-
 @Controller
 @RequestMapping("/")
 public class CustomaController {
 	@Autowired
 	CustomaService serviceIoC;
-
-	@RequestMapping(path = "/createCustomer", method = { RequestMethod.PUT, RequestMethod.POST })
-	public String createCustomer(Customa customaX) {
+	///////////////////////////////////////////////////////////////////////////////////////////////
+	@RequestMapping(path = "/createdCustomer", method = { RequestMethod.PUT, RequestMethod.POST })
+	public String createCustomer(Customa customaX) 
+	{
 		serviceIoC.creatingCustomer(customaX);
 		return "redirect:/";
+		//return "editContact";
 	}
+
+	@GetMapping(path = { "/added", "/added/{id}" })
+	public String readCustomerById(Model customaX, @PathVariable("id") Optional<Long> id)
+			throws RecordNotFoundException {
+	//	if (id.isPresent()) {
+			Customa entity = serviceIoC.readOneCustomer(id.get());
+			customaX.addAttribute("customer", entity);
+	//	} else {
+		//	customaX.addAttribute("customer", new Customa());
+	//	}
+		return "addContact";
+	}
+
+	// @GetMapping(path = { "/added", "/added/{id}" })
+	// public String readCustomerById2(Model customaX, @PathVariable("id") Optional<Long> id)
+	// 		throws RecordNotFoundException {
+	// 	if (id.isPresent()) {
+	// 		Customa entity = serviceIoC.readOneCustomer(id.get());
+	// 		customaX.addAttribute("customer", entity);
+	// 	} else {
+	// 		customaX.addAttribute("customer", new Customa());
+	// 	}
+	// 	return "addContact";
+	// }
+
+	///////////////////////////////////////////////////////////////////////////////////////////////
 
 	@RequestMapping
 	public String readCustomers(Model customaX, @Param("keyword") String keyword) {
@@ -37,20 +63,9 @@ public class CustomaController {
 		return "listContacts";
 	}
 
-	@GetMapping(path = { "/added", "/added/{id}" })
-	public String readCustomerById(Model customaX, @PathVariable("id") Optional<Long> id)
-			throws RecordNotFoundException {
-		if (id.isPresent()) {
-			Customa entity = serviceIoC.readOneCustomer(id.get());
-			customaX.addAttribute("customer", entity);
-		} else {
-			customaX.addAttribute("customer", new Customa());
-		}
-		return "addContact";
-	}
-
 	@RequestMapping(path = "/delete/{id}")
-	public String deleteEmployeeById(Model model, @PathVariable("id") Long id) throws RecordNotFoundException {
+	public String deleteEmployeeById(Model model, @PathVariable("id") Long id) throws RecordNotFoundException
+	 {
 		serviceIoC.deleteEmployeeById(id);
 		return "redirect:/";
 	}
