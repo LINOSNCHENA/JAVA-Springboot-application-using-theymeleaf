@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Table(name = "CUSTOMALIST")
 public class Customa {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "first_name") // Capital letters = small letters+underscore!
     private String firstName;
@@ -30,18 +30,22 @@ public class Customa {
     }
 
     public String getFirstName() {
+        // firstName= firstName.toUpperCase();
         return firstName;
     }
 
     public void setFirstName(String firstName) {
+        // firstName= firstName.toUpperCase();
         this.firstName = firstName;
     }
 
     public String getLastName() {
+        // lastName= lastName.toUpperCase();
         return lastName;
     }
 
     public void setLastName(String lastName) {
+        // lastName= lastName.toUpperCase();
         this.lastName = lastName;
     }
 

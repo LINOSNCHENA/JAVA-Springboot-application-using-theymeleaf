@@ -14,10 +14,10 @@
     <div class="container my-2" align ="center">
         <div class="card">
             <div class="card-body">
-                <h3> Console for data entry into the registar's records</h3>
+                <h3> Data Entry into the Registar's Records</h3>
                 <div class="col-md-8">
                     <form action="#" th:action="@{/createOrUpdate}" th:object="${customer}" method="post">
-                        <div class="row">
+                        <div class="row" align="center"> 
                             <div class="form-group col-md-8">
                                 <label for="name" class="col-form-label">First-Name</label>
                                 <input type="text" th:field="*{firstName}" class="form-control" id="firstName"
