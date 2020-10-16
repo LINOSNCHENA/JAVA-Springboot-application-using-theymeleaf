@@ -1,24 +1,24 @@
 use presly;
-DROP TABLE IF EXISTS CUSTOMALIST;
-CREATE TABLE CUSTOMALIST
+DROP TABLE IF EXISTS CUSTOMERLIST;
+CREATE TABLE CUSTOMERLIST
 (
 	id serial PRIMARY KEY,
-	first_name VARCHAR
+	firstname VARCHAR
 	(250) NOT NULL,
-	last_name VARCHAR
+	lastname VARCHAR
 	(250) NOT NULL,
 	email VARCHAR
 	(250) DEFAULT NULL
 );
 
 INSERT INTO 
-	CUSTOMALIST
-	(first_name, last_name, email)
+	CUSTOMERLIST
+	(firstname, lastname, email)
 VALUES
 	('NORIA Nicoles', 'Teacher', 'cathy.phiri@lsk.co.uk'),
-	('MARTIN LOWLAND', 'Science', 'leon.lorena@kzn.zm'),
+	('Diana Lorena', 'Science', 'leon.lorena@kzn.zm'),
 	('Nikolas Marvin ', 'Engineer', 'nikolas.marvina@gmail.ru'),
 	('SEARCH WORKS', 'Nurse', 'marvin.works@pba.zm'),
-	('ICE CUBE', 'Developer', 'elvis.presly@prg.cz');
+	('Elvis Presly', 'Developer', 'elvis.presly@prg.cz');
 SELECT *
-from CUSTOMALIST
+from CUSTOMERLIST

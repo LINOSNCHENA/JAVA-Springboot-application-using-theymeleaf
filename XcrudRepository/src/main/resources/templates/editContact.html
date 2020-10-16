@@ -4,28 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>CRUD2 - WELCOME TO CONTACTS BOOK</title>
+    <title>WELCOME TO CONTACTS BOOK 2CRUD</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 </head>
 
 <body>
-    <div class="container my-2" align ="center">
+    <div class="container my-2" align="center">
         <div class="card">
             <div class="card-body">
-                <h3> Console for data entry into the registar's records</h3>
+                <h3> 22-Entry of data into the registar's records</h3>
                 <div class="col-md-8">
-                    <form action="#" th:action="@{/createOrUpdate}" th:object="${customer}" method="post">
+                    <form action="#" th:action="@{/createdCustomer}" th:object="${customerX}" method="post">
+                        <!-- ============================================ -->
                         <div class="row">
                             <div class="form-group col-md-8">
                                 <label for="name" class="col-form-label">First-Name</label>
-                                <input type="text" th:field="*{firstName}" class="form-control" id="firstName"
+                                <input type="text" th:field="*{firstname}" class="form-control" id="firstname"
                                     placeholder="First Name" /></div>
 
                             <div class="form-group col-md-8">
                                 <label for="name" class="col-form-label"> Last-Name</label>
-                                <input type="text" th:field="*{lastName}" class="form-control" id="lastName"
+                                <input type="text" th:field="*{lastname}" class="form-control" id="lastname"
                                     placeholder="Last Name" /></div>
 
                             <div class="form-group col-md-8">
@@ -36,7 +37,7 @@
                             <div class="col-md-6">
                                 <input type="submit" class="btn btn-primary" value=" Submit ">
                             </div>
-                            <input type="hidden" id="id" th:field="*{id}" placeholder="Future Field in 2020">
+                            <!-- <input type="hidden" id="id" th:field="*{id}" placeholder="Future Field in 2020"> -->
                         </div>
                     </form>
                 </div>
@@ -44,4 +45,5 @@
         </div>
     </div>
 </body>
+
 </html>

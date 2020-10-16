@@ -9,16 +9,16 @@ import javax.persistence.Table;
 
 // HIBERNATE STAFFS!
 @Entity
-@Table(name = "CUSTOMALIST")
+@Table(name = "CUSTOMERLIST")
 public class Customa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Long id;
-    @Column(name = "first_name") // Capital letters = small letters+underscore!
-    private String firstName;
-    @Column(name = "last_name", nullable = false, length = 80)
-    private String lastName;
-    @Column(name = "email", nullable = false, length = 80)
+    @Column(name = "firstname")
+    private String firstname;
+    @Column(name = "lastname", nullable = false, length = 60)
+    private String lastname;
+    @Column(name = "email", nullable = false, length = 60)
     private String email;
 
     public Long getId() {
@@ -29,20 +29,20 @@ public class Customa {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname.toUpperCase();
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname.toUpperCase();
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname.toUpperCase();
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname.toUpperCase();
     }
 
     public String getEmail() {

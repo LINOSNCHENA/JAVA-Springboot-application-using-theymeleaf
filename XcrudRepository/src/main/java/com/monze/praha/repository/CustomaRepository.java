@@ -7,10 +7,11 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import com.monze.praha.model.Customa;
 
+
 @Repository
 public interface CustomaRepository extends CrudRepository<Customa, Long> {
-	@Query("SELECT X FROM Customa X WHERE CONCAT(X.firstName, ' ', X.lastName, ' ', X.email) LIKE %?1%")
-	public List<Customa> findCustoma(String keyword);
+	@Query("SELECT X FROM Customa X WHERE CONCAT(X.firstname, ' ', X.lastname, ' ', X.email) LIKE %?1%")
+	 List<Customa> findCustoma(String keyword);
+	 //  List<CustomerEntity> findCustoma(String lastname);
 	// User findByEmailAddress(String emailAddress);
-	// public List<Customa> search(String lastName);
 }

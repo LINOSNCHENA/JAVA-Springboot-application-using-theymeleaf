@@ -3,8 +3,9 @@
 
 <head>
 	<meta charset="ISO-8859-1">
+	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>WELCOME TO CONTACTS BOOK 3JPA</title>
+	<title>WELCOME TO CONTACTS BOOK 2JPA</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -15,15 +16,11 @@
 	<div class="container my-2" align="center">
 		<div class="card">
 			<div class="card-body">
-				<h1>Edit Contact</h1>
+				<h1>Create New Contact</h1>
 				<br />
-				<form action="#" th:action="@{/save}" th:object="${Customa}" method="post">
+				<form action="#" th:action="@{/save}" th:object="${CustomerX}" method="post">
 					<table border="0" cellpadding="10">
-						<tr>
-							<td>ID no.:</td>
-							<td><input type="text" th:field="*{id}" readonly="readonly" /></td>
-						</tr>
-	
+				
 						<tr>
 							<td>FirstName .:</td>
 							<td><input type="text" th:field="*{firstname}" />
@@ -31,19 +28,17 @@
 							</td>
 						</tr>
 						<tr>
-							<td>LastName :</td>
+							<td>lastname:</td>
 							<td><input type="text" th:field="*{lastname}" />
-								<a><i class="fas fa-user-edit ml-2"></i></a>
-							</td>
+								<a><i class="fas fa-user-plus ml-2"></i></a></td>
 						</tr>
 						<tr>
-							<td>Emails :</td>
+							<td>email:</td>
 							<td><input type="text" th:field="*{email}" />
-								<a><i class="fas fa-user-edit ml-2"></i></a>
-							</td>
+								<a><i class="fas fa-user-plus ml-2"></i></a></td>
 						</tr>
-
-						<td colspan="2"><button type="submit">Save</button></td>
+										<tr>
+							<td colspan="2"><button type="submit">Save Contact </button></td>
 						</tr>
 					</table>
 				</form>
@@ -51,5 +46,4 @@
 		</div>
 	</div>
 </body>
-
 </html>
