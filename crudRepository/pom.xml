@@ -54,12 +54,13 @@
     <version>42.2.14</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/com.microsoft.jdbc  Monze#3-->
+<!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.4.1.jre8</version>
-    <scope>test</scope>
+    <version>9.1.0.jre15-preview</version>
 </dependency>
+
 <!-- https://mvnrepository.com/artifact/com.h2database/h2 Monze#4-->
 <dependency>
     <groupId>com.h2database</groupId>
