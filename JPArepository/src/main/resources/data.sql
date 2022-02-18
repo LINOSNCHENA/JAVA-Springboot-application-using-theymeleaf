@@ -12,5 +12,5 @@ VALUES(
         551.010,
         now()
     );
--- select *
--- from ContactsList
+select *
+from ContactsList
