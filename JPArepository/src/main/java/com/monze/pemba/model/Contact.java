@@ -19,7 +19,7 @@ public class Contact {
 	private BigInteger office;
 	private int stars;
 	@DateTimeFormat(pattern = "yyyy/MM/dd | - |  HH:mm:ss")
-	@Column(name = "created_at", columnDefinition = "CURRENT_TIMESTAMP")
+	@Column(name = "created_at", columnDefinition = "CURRENT_TIMESTAMP" )
 	private Date created_at;
 
 	public Contact() {

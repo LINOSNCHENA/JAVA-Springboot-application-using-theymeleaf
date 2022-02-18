@@ -1,6 +1,6 @@
-com\monze\praha\controller\CustomaController.class
 com\monze\praha\model\Customa.class
 com\monze\praha\PrahaApplication.class
+com\monze\praha\exception\RecordNotFoundException.class
+com\monze\praha\controller\CustomaController.class
 com\monze\praha\repository\CustomaRepository.class
 com\monze\praha\service\CustomaService.class
-com\monze\praha\exception\RecordNotFoundException.class

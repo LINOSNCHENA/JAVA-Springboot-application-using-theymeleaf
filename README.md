@@ -34,16 +34,25 @@ mvn spring-boot:run
 ## Links for the development and deployment version
 
 Open [http://localhost:8080/](http://localhost:8080/) in browser to see the application.
+Open [http://localhost:8081/](http://localhost:8081/) in browser to see the application.
 
 ## Interface UX
 
  Below are some Screens shots from the application
 
-![ Application Singleton Interface page #3 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/uXviews/page%20(1).png)
-![ Application Singleton Interface page #3 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/uXviews/page%20(2).png)
+![ Application Singleton Interface page #1 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/uXviews/page%20(1).png)
+![ Application Singleton Interface page #2 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/uXviews/page%20(2).png)
 ![ Application Singleton Interface page #3 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/uXviews/page%20(3).png)
 
-![ Application Singleton Interface page #3 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/uXviews/page%20(4).png)
-![ Application Singleton Interface page #3 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/uXviews/page%20(5).png)
-![ Application Singleton Interface page #3 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/uXviews/page%20(6).png)
+![ Application Singleton Interface page #4 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/uXviews/page%20(4).png)
+![ Application Singleton Interface page #5 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/uXviews/page%20(5).png)
+![ Application Singleton Interface page #6 ](https://github.com/LINOSNCHENA/JAVA-Springboot-and-Theyleaf/blob/master/uXviews/page%20(6).png)
 
+
+## Version - Week #10
+
+```
+   02/18/2022
+```
+
+# End

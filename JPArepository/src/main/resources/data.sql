@@ -1,22 +1,16 @@
-DROP TABLE IF EXISTS ContactsList;
-CREATE TABLE Contactslist
-(
-    ID serial PRIMARY KEY,
-    NAME varchar (45) NOT NULL,
-    MOBILE bigint
-    (45) NOT NULL,
-    OFFICE bigint
-    (45) NOT NULL,
-    STARS int NOT NULL,
-    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
-);
-
-INSERT INTO ContactsList
-    (NAME, MOBILE, OFFICE, STARS)
-VALUES('POLICE', 87947463, 984442346, 71.010),
-    ('HOSPITAL', 89756757756, 666661235, 17.27),
-    ('FIRE X1', 87922222, 873333, 63.37),
-    ('EMMERGENCY', 897111123, 89884758, 67.87);
-
-select *
-from ContactsList
+INSERT INTO public.ContactsList(name, mobile, office, stars, created_at)
+VALUES('POLICE', 87947463, 984442346, 61.010, now());
+INSERT INTO public.ContactsList(name, mobile, office, stars, created_at)
+VALUES('HOSPITAL', 779447463, 184442346, 761.010, now());
+INSERT INTO public.ContactsList(name, mobile, office, stars, created_at)
+VALUES('FIRE-X1', 679472463, 284442346, 881.010, now());
+INSERT INTO public.ContactsList(name, mobile, office, stars, created_at)
+VALUES(
+        'EMERGENCY',
+        579471463,
+        9334442346,
+        551.010,
+        now()
+    );
+-- select *
+-- from ContactsList
