@@ -51,7 +51,7 @@
 <dependency>
     <groupId>org.postgresql</groupId>
     <artifactId>postgresql</artifactId>
-    <version>42.2.14</version>
+    <version>42.3.3</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/com.microsoft.jdbc  Monze#3-->
 <!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
@@ -65,7 +65,7 @@
 <dependency>
     <groupId>com.h2database</groupId>
     <artifactId>h2</artifactId>
-    <version>1.4.199</version>
+    <version>2.1.210</version>
     <scope>test</scope>
 </dependency>
 <dependency>
@@ -77,7 +77,7 @@
 <dependency>
     <groupId>org.hibernate</groupId>
     <artifactId>hibernate-core</artifactId>
-    <version>5.4.19.Final</version>
+    <version>5.4.24.Final</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
 <dependency>
